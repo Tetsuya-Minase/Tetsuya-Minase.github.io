@@ -1,18 +1,12 @@
 <section>
+  <h1>プロフィール</h1>
+  <app-profile></app-profile>
+</section>
+<section>
   <h1>最近の更新履歴</h1>
   <section>
     <h1>ブログ</h1>
-    <ol>
-      <li>
-        <article><h1><a href="https://minase-program.hatenablog.com/" target="_blank">記事１</a></h1></article>
-      </li>
-      <li>
-        <article><h1><a href="https://minase-program.hatenablog.com/" target="_blank">記事２</a></h1></article>
-      </li>
-      <li>
-        <article><h1><a href="https://minase-program.hatenablog.com/" target="_blank">記事３</a></h1></article>
-      </li>
-    </ol>
+    <ol-component [itemList]="linkList"></ol-component>
   </section>
   <section>
     <h1>Twitter</h1>

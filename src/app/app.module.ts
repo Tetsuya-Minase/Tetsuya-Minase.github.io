@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SeoService } from './common/service/seo/seo.service';
 import { FooterModule } from './common/component/footer/footer.module';
+import { TopModule } from './page/top/top.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FooterModule } from './common/component/footer/footer.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FooterModule
+    FooterModule,
+    TopModule
   ],
   providers: [SeoService],
   bootstrap: [AppComponent]
