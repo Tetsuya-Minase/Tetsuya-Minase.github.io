@@ -1,6 +1,6 @@
 import { IdleMonitorService } from '@scullyio/ng-lib';
 import { Component } from '@angular/core';
-import { SeoService } from './common/seo/seo.service';
+import { SeoService } from './common/service/seo/seo.service';
 
 @Component({
   selector: 'app-root',
