@@ -5,9 +5,13 @@ import { LinkListItem } from '../../model/ListItem';
   selector: 'ul-component',
   template: `
     <ul>
-      <li *ngFor="let item of itemList"><a [href]="item.linkUrl" target="_blank"><img [src]="item.icon" [alt]="item.linkText"></a></li>
+      <li *ngFor="let item of itemList" class="ul-component">
+        <a [href]="item.linkUrl" target="_blank" class="ul-component__link">
+          <img [src]="item.icon" [alt]="item.linkText" width="30" class="ul-component__link__icon">
+        </a>
+      </li>
     </ul>
-  `,
+  `
 })
 export class UnorderedListComponent {
   @Input() itemList: LinkListItem[];
