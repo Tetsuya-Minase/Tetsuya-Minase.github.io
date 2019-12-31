@@ -7,10 +7,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { SeoService } from './common/service/seo/seo.service';
 import { FooterModule } from './common/component/footer/footer.module';
 import { TopModule } from './page/top/top.module';
+import { HeaderComponent } from './common/component/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
