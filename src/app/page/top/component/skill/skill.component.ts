@@ -24,7 +24,7 @@ export class SkillComponent implements OnInit {
       linkText: 'Java',
       linkUrl: '',
       description: '',
-      icon: 'assets/language/java.png'
+      icon: 'assets/language/java.svg'
     }
   ];
   frontendFrameworkList: LinkListItem[] = [
@@ -46,7 +46,7 @@ export class SkillComponent implements OnInit {
       linkText: 'express',
       linkUrl: '',
       description: '',
-      icon: 'assets/framework/express.png'
+      icon: 'assets/framework/express-icon.png'
     },
     {
       linkText: 'SpringBoot',
