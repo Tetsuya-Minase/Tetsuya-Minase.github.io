@@ -12,19 +12,19 @@ export class ProfileComponent implements OnInit {
       linkText: 'Github',
       linkUrl: 'https://github.com/Tetsuya-Minase',
       description: 'Githubだよー',
-      icon: 'assets/github/GitHub-Mark.png'
+      icon: 'assets/link/GitHub-Mark.png'
     },
     {
       linkText: 'Twitter',
       linkUrl: 'https://twitter.com/minase_tetsuya',
       description: 'Twitterだよー',
-      icon: 'assets/twitter/Twitter_Social_Icon_Circle_Color.svg'
+      icon: 'assets/link/Twitter_Social_Icon_Circle_Color.svg'
     },
     {
       linkText: 'ブログ',
       linkUrl: 'https://minase-program.hatenablog.com/',
       description: 'ブログだよー',
-      icon: 'assets/hatena-blog/hatenablog-logo.svg'
+      icon: 'assets/link/hatenablog-logo.svg'
     }
   ];
 
