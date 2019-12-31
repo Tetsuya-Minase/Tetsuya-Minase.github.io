@@ -12,7 +12,7 @@ import { LinkListItem } from '../../model/ListItem';
       </li>
     </ul>
   `,
-  styles: ['.ul-component { display: inline; }']
+  styles: ['.ul-component { display: inline; margin: 0 0 0 10px }']
 })
 export class UnorderedListComponent {
   @Input() itemList: LinkListItem[];
