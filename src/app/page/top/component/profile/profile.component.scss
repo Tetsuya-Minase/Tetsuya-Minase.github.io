@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import "src/app/common/style/variable";
+
+.profile {
+  &__detail {
+    background-color: $white;
+    border-radius: $radius;
+  }
+}

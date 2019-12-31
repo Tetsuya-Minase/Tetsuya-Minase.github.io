@@ -1,18 +1,20 @@
-<section>
+<section class="skill">
   <h1>スキル</h1>
-  <article>
-    <h1>Language</h1>
-    <ul-component [itemList]="languageList"></ul-component>
-  </article>
-  <article>
-    <h1>Framework</h1>
+  <div class="skill__detail">
     <article>
-      <h1>FrontEnd</h1>
-      <ul-component [itemList]="frontendFrameworkList"></ul-component>
+      <h1>Language</h1>
+      <ul-component [itemList]="languageList"></ul-component>
     </article>
     <article>
-      <h1>BackEnd</h1>
-      <ul-component [itemList]="backendFrameworkList"></ul-component>
+      <h1>Framework</h1>
+      <article>
+        <h1>FrontEnd</h1>
+        <ul-component [itemList]="frontendFrameworkList"></ul-component>
+      </article>
+      <article>
+        <h1>BackEnd</h1>
+        <ul-component [itemList]="backendFrameworkList"></ul-component>
+      </article>
     </article>
-  </article>
+  </div>
 </section>
