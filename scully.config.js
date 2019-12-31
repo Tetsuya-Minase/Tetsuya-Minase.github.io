@@ -1,5 +1,5 @@
 exports.config = {
   projectRoot: './src/app',
-  outFolder: './docs',
+  outFolder: './public',
   routes: {}
 };
