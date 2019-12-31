@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SeoService } from './common/service/seo/seo.service';
+import { FooterModule } from './common/component/footer/footer.module';
+import { TopModule } from './page/top/top.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,12 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FooterModule,
+    TopModule
   ],
-  providers: [],
+  providers: [SeoService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

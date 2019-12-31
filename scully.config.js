@@ -1,5 +1,5 @@
 exports.config = {
-  projectRoot: "./src/app",
-  routes: {
-  }
+  projectRoot: './src/app',
+  outFolder: './docs',
+  routes: {}
 };

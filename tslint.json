@@ -16,7 +16,7 @@
       "camelCase"
     ],
     "component-selector": [
-      true,
+      false,
       "element",
       "app",
       "kebab-case"
@@ -26,6 +26,7 @@
       "rxjs/Rx"
     ],
     "interface-name": false,
+    "interface-over-type-literal": false,
     "max-classes-per-file": false,
     "max-line-length": [
       true,
