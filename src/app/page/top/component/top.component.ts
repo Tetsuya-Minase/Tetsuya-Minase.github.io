@@ -28,7 +28,7 @@ export class TopComponent implements OnInit {
     // TODO: あまり上手い方法だと思わないので要検討
     const script = document.createElement('script');
     script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
-    const targetDom = document.getElementsByClassName('sidebar');
+    const targetDom = document.getElementsByClassName('top-component__sidebar');
     targetDom.item(0).appendChild(script);
   }
 }
