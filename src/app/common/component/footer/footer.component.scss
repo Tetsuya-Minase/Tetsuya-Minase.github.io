@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@import "src/app/common/style/variable";
+
+.footer {
+  &__copyright {
+    color: $black;
+  }
+}
