@@ -1,16 +1,13 @@
 <section class="profile">
-  <!--  <h1>About me</h1>-->
-  <heading text="About me"></heading>
+  <heading text="About me" level="1"></heading>
   <div class="profile__detail">
-    <article>
-      <!--      <h1>名前</h1>-->
-      <heading text="名前"></heading>
-      <p>水無瀬</p>
+    <article class="profile__detail__name">
+      <heading text="名前" level="2"></heading>
+      <p class="profile__detail__name__value">水無瀬</p>
     </article>
-    <article>
-      <!--      <h1>リンク</h1>-->
-      <heading text="リンク"></heading>
-      <ul-component [itemList]="linkList" class="link__ul-component"></ul-component>
+    <article class="profile__detail__link">
+      <heading text="リンク" level="2"></heading>
+      <ul-component [itemList]="linkList" class="profile__detail__link__list"></ul-component>
     </article>
   </div>
 </section>

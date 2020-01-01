@@ -7,22 +7,24 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeadingComponent implements OnInit {
   @Input() text: string;
-  @Input() level = 1;
+  @Input() level = '1';
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  get headingClass() {
     switch (this.level) {
-      case 1:
-        break;
-      case 2:
-        break;
-      case 3:
-        break;
-      case 4:
-        break;
+      case '1':
+        return 'heading-1';
+      case '2':
+        return 'heading-2';
+      case '3':
+        return 'heading-3';
       default:
+        return '';
     }
   }
 

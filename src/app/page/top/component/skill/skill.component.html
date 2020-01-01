@@ -1,24 +1,20 @@
 <section class="skill">
-  <!--  <h1>スキル</h1>-->
   <heading text="スキル"></heading>
   <div class="skill__detail">
-    <article>
-      <!--      <h1>Language</h1>-->
+    <article class="skill__detail__language">
       <heading text="Language" level="2"></heading>
-      <ul-component [itemList]="languageList"></ul-component>
+      <ul-component [itemList]="languageList" class="skill__detail__language__list"></ul-component>
     </article>
-    <article>
-      <!--      <h1>Framework</h1>-->
+    <article class="skill__detail__framework">
       <heading text="Framework" level="2"></heading>
-      <article>
-        <!--        <h1>FrontEnd</h1>-->
+      <article class="skill__detail__framework__frontend">
         <heading text="FrontEnd" level="3"></heading>
-        <ul-component [itemList]="frontendFrameworkList"></ul-component>
+        <ul-component [itemList]="frontendFrameworkList"
+                      class="skill__detail__framework__frontend__list"></ul-component>
       </article>
-      <article>
-        <!--        <h1>BackEnd</h1>-->
+      <article class="skill__detail__framework__backend">
         <heading text="BackEnd" level="3"></heading>
-        <ul-component [itemList]="backendFrameworkList"></ul-component>
+        <ul-component [itemList]="backendFrameworkList" class="skill__detail__framework__backend__list"></ul-component>
       </article>
     </article>
   </div>
