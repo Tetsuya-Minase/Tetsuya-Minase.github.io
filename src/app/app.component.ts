@@ -10,6 +10,4 @@ import { SeoService } from './common/service/seo/seo.service';
 export class AppComponent {
   constructor(private readonly idle: IdleMonitorService, private readonly seoService: SeoService) {
   }
-
-  title = 'ng-my-page';
 }

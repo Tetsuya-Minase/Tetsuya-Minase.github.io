@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+@import "app/common/style/reset";
+@import "app/common/style/variable";
+
+
+body {
+  background-color: $light-blue;
+  color: $black;
+  font-size: $font-size;
+}

@@ -1,11 +1,13 @@
-<section>
-  <h1>About me</h1>
-  <article>
-    <h1>名前</h1>
-    <p>水無瀬</p>
-  </article>
-  <article>
-    <h1>リンク</h1>
-    <ul-component [itemList]="linkList" class="link__ul-component"></ul-component>
-  </article>
+<section class="profile">
+  <heading text="About me" level="1"></heading>
+  <div class="profile__detail">
+    <article class="profile__detail__name">
+      <heading text="名前" level="2"></heading>
+      <p class="profile__detail__name__value">水無瀬</p>
+    </article>
+    <article class="profile__detail__link">
+      <heading text="リンク" level="2"></heading>
+      <ul-component [itemList]="linkList" class="profile__detail__link__list"></ul-component>
+    </article>
+  </div>
 </section>

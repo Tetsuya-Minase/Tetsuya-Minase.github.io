@@ -7,7 +7,7 @@ import { LinkListItem } from '../../model/ListItem';
     <ul>
       <li *ngFor="let item of itemList" class="ul-component">
         <a [href]="item.linkUrl" target="_blank" class="ul-component__link">
-          <img [src]="item.icon" [alt]="item.linkText" width="64" height="64" class="ul-component__link__icon">
+          <img [src]="item.icon" [alt]="item.linkText" width="101" height="101" class="ul-component__link__icon">
         </a>
       </li>
     </ul>

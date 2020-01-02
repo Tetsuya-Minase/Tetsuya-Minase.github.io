@@ -5,13 +5,15 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { OrderedListModule } from '../../common/component/ordered-list/ordered-list.module';
 import { UnorderedListModule } from '../../common/component/unordered-list/unordered-list.module';
 import { SkillComponent } from './component/skill/skill.component';
+import { HeadingModule } from '../../common/component/heading/heading.module';
 
 @NgModule({
   declarations: [TopComponent, ProfileComponent, SkillComponent],
   imports: [
     CommonModule,
     OrderedListModule,
-    UnorderedListModule
+    UnorderedListModule,
+    HeadingModule
   ],
   exports: [TopComponent]
 })
