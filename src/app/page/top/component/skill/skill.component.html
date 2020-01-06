@@ -3,18 +3,33 @@
   <div class="skill__detail">
     <article class="skill__detail__language">
       <heading text="Language" level="2"></heading>
-      <ul-component [itemList]="languageList" class="skill__detail__language__list"></ul-component>
+      <ul class="skill__detail__language__list">
+        <li *ngFor="let item of languageList" class="skill__detail__language__list__item">
+          <img [src]="item.icon" [alt]="item.linkText"
+               class="skill__detail__language__list__item__icon">
+          <div class="skill__detail__language__list__item__icon--hover">hoge</div>
+        </li>
+      </ul>
     </article>
     <article class="skill__detail__framework">
       <heading text="Framework" level="2"></heading>
       <article class="skill__detail__framework__frontend">
         <heading text="FrontEnd" level="3"></heading>
-        <ul-component [itemList]="frontendFrameworkList"
-                      class="skill__detail__framework__frontend__list"></ul-component>
+        <ul class="skill__detail__framework__frontend__list">
+          <li *ngFor="let item of frontendFrameworkList" class="skill__detail__framework__frontend__list__item">
+            <img [src]="item.icon" [alt]="item.linkText" width="101" height="101"
+                 class="skill__detail__framework__frontend__list__item__icon">
+          </li>
+        </ul>
       </article>
       <article class="skill__detail__framework__backend">
         <heading text="BackEnd" level="3"></heading>
-        <ul-component [itemList]="backendFrameworkList" class="skill__detail__framework__backend__list"></ul-component>
+        <ul class="skill__detail__framework__backend__list">
+          <li *ngFor="let item of backendFrameworkList" class="skill__detail__framework__backend__list__item">
+            <img [src]="item.icon" [alt]="item.linkText" width="101" height="101"
+                 class="skill__detail__framework__backend__list__item__icon">
+          </li>
+        </ul>
       </article>
     </article>
   </div>
