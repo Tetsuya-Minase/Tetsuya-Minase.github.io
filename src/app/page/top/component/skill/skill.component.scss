@@ -1,31 +1,127 @@
 @charset "UTF-8";
 @import "src/app/common/style/variable";
 
+.column {
+  height: 15rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.list {
+  display: inline-block;
+  margin: 0 0 0 1rem;
+  padding: 1rem 0 0 0;
+  position: relative;
+  transition-duration: .4s;
+  transform-style: preserve-3d;
+}
+
+.icon {
+  position: absolute;
+  background-size: cover;
+  background-position: 50%;
+  backface-visibility: hidden;
+  border: solid 0.2rem $black;
+  height: 101px;
+  width: 101px;
+}
+
+.hover {
+  background-size: cover;
+  background-position: 50%;
+  backface-visibility: hidden;
+  border: solid 0.2rem $black;
+  height: 101px;
+  width: 101px;
+  transform: rotateY(180deg);
+}
+
+.paragraph {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 101px;
+  text-align: center;
+  width: 101px;
+}
+
 .skill {
-  margin: 2em 0.5em 0.5em 0.5em;
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
 
   &__detail {
     background-color: $white;
     border-radius: $radius;
-    margin: 0.5em 0 0 0;
-    padding: 1.6em;
+    margin: 0.5rem 0 0 0;
+    padding: 1.6rem;
 
     &__language {
+      @extend .column;
+
       &__list {
-        margin: 0.5em 0 0 0.5em;
+        @extend .list;
+
+        &__icon {
+          @extend .icon;
+
+          &--hover {
+            @extend .hover;
+
+            p {
+              @extend .paragraph;
+            }
+          }
+        }
+
+        &:hover {
+          transform: rotateY(-180deg);
+        }
       }
     }
 
     &__framework {
       &__frontend {
+        @extend .column;
+
         &__list {
-          margin: 0.5em 0 0 0.5em;
+          @extend .list;
+
+          &__icon {
+            @extend .icon;
+
+            &--hover {
+              @extend .hover;
+
+              p {
+                @extend .paragraph;
+              }
+            }
+          }
+
+          &:hover {
+            transform: rotateY(-180deg);
+          }
         }
       }
 
       &__backend {
+        @extend .column;
+
         &__list {
-          margin: 0.5em 0 0 0.5em;
+          @extend .list;
+
+          &__icon {
+            @extend .icon;
+
+            &--hover {
+              @extend .hover;
+
+              p {
+                @extend .paragraph;
+              }
+            }
+          }
+
+          &:hover {
+            transform: rotateY(-180deg);
+          }
         }
       }
     }
