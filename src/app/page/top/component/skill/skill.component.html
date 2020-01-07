@@ -3,13 +3,15 @@
   <div class="skill__detail">
     <article class="skill__detail__language">
       <heading text="Language" level="2"></heading>
-      <ul class="skill__detail__language__list">
-        <li *ngFor="let item of languageList" class="skill__detail__language__list__item">
-          <img [src]="item.icon" [alt]="item.linkText"
-               class="skill__detail__language__list__item__icon">
-          <div class="skill__detail__language__list__item__icon--hover">hoge</div>
-        </li>
-      </ul>
+      <ng-container *ngFor="let item of languageList">
+        <article class="skill__detail__language__list">
+          <img [src]="item.icon" [alt]="item.skill"
+               class="skill__detail__language__list__icon">
+          <div class="skill__detail__language__list__icon--hover">
+            <p>経験：{{item.experience}}年</p>
+          </div>
+        </article>
+      </ng-container>
     </article>
     <article class="skill__detail__framework">
       <heading text="Framework" level="2"></heading>
@@ -17,7 +19,7 @@
         <heading text="FrontEnd" level="3"></heading>
         <ul class="skill__detail__framework__frontend__list">
           <li *ngFor="let item of frontendFrameworkList" class="skill__detail__framework__frontend__list__item">
-            <img [src]="item.icon" [alt]="item.linkText" width="101" height="101"
+            <img [src]="item.icon" [alt]="item.skill" width="101" height="101"
                  class="skill__detail__framework__frontend__list__item__icon">
           </li>
         </ul>
@@ -26,7 +28,7 @@
         <heading text="BackEnd" level="3"></heading>
         <ul class="skill__detail__framework__backend__list">
           <li *ngFor="let item of backendFrameworkList" class="skill__detail__framework__backend__list__item">
-            <img [src]="item.icon" [alt]="item.linkText" width="101" height="101"
+            <img [src]="item.icon" [alt]="item.skill" width="101" height="101"
                  class="skill__detail__framework__backend__list__item__icon">
           </li>
         </ul>

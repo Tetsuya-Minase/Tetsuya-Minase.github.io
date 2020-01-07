@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LinkListItem } from '../../../../common/model/ListItem';
+import { SkillListItem } from '../../../../common/model/ListItem';
 
 @Component({
   selector: 'app-skill',
@@ -7,57 +7,49 @@ import { LinkListItem } from '../../../../common/model/ListItem';
   styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent implements OnInit {
-  languageList: LinkListItem[] = [
+  languageList: SkillListItem[] = [
     {
-      linkText: 'JavaScript',
-      linkUrl: '',
-      description: '',
+      skill: 'JavaScript',
+      experience: 2,
       icon: 'assets/language/typescript.svg'
     },
     {
-      linkText: 'TypeScript',
-      linkUrl: '',
-      description: '',
+      skill: 'TypeScript',
+      experience: 2,
       icon: 'assets/language/javascript.svg'
     },
     {
-      linkText: 'Java',
-      linkUrl: '',
-      description: '',
+      skill: 'Java',
+      experience: 1,
       icon: 'assets/language/java.svg'
     }
   ];
-  frontendFrameworkList: LinkListItem[] = [
+  frontendFrameworkList: SkillListItem[] = [
     {
-      linkText: 'Angular',
-      linkUrl: '',
-      description: '',
+      skill: 'Angular',
+      experience: 2,
       icon: 'assets/framework/angular.svg'
     },
     {
-      linkText: 'react',
-      linkUrl: '',
-      description: '',
+      skill: 'react',
+      experience: 1,
       icon: 'assets/framework/react.svg'
     }
   ];
-  backendFrameworkList: LinkListItem[] = [
+  backendFrameworkList: SkillListItem[] = [
     {
-      linkText: 'express',
-      linkUrl: '',
-      description: '',
+      skill: 'express',
+      experience: 2,
       icon: 'assets/framework/express-icon.png'
     },
     {
-      linkText: 'SpringBoot',
-      linkUrl: '',
-      description: '',
+      skill: 'SpringBoot',
+      experience: 1,
       icon: 'assets/framework/spring-boot.jpg'
     },
     {
-      linkText: 'node.js',
-      linkUrl: '',
-      description: '',
+      skill: 'node.js',
+      experience: 2,
       icon: 'assets/framework/nodejs.png'
     }
   ];
