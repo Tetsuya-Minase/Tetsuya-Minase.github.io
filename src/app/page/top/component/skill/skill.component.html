@@ -17,21 +17,28 @@
       <heading text="Framework" level="2"></heading>
       <article class="skill__detail__framework__frontend">
         <heading text="FrontEnd" level="3"></heading>
-        <ul class="skill__detail__framework__frontend__list">
-          <li *ngFor="let item of frontendFrameworkList" class="skill__detail__framework__frontend__list__item">
-            <img [src]="item.icon" [alt]="item.skill" width="101" height="101"
-                 class="skill__detail__framework__frontend__list__item__icon">
-          </li>
-        </ul>
+        <ng-container *ngFor="let item of frontendFrameworkList">
+          <article class="skill__detail__framework__frontend__list">
+            <img [src]="item.icon" [alt]="item.skill"
+                 class="skill__detail__framework__frontend__list__icon">
+            <div class="skill__detail__framework__frontend__list__icon--hover">
+              <p>経験：{{item.experience}}年</p>
+            </div>
+          </article>
+        </ng-container>
       </article>
       <article class="skill__detail__framework__backend">
         <heading text="BackEnd" level="3"></heading>
-        <ul class="skill__detail__framework__backend__list">
-          <li *ngFor="let item of backendFrameworkList" class="skill__detail__framework__backend__list__item">
-            <img [src]="item.icon" [alt]="item.skill" width="101" height="101"
-                 class="skill__detail__framework__backend__list__item__icon">
-          </li>
-        </ul>
+
+        <ng-container *ngFor="let item of backendFrameworkList">
+          <article class="skill__detail__framework__frontend__list">
+            <img [src]="item.icon" [alt]="item.skill"
+                 class="skill__detail__framework__backend__list__icon">
+            <div class="skill__detail__framework__backend__list__icon--hover">
+              <p>経験：{{item.experience}}年</p>
+            </div>
+          </article>
+        </ng-container>
       </article>
     </article>
   </div>

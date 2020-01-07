@@ -1,6 +1,48 @@
 @charset "UTF-8";
 @import "src/app/common/style/variable";
 
+.column {
+  height: 15rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
+
+.list {
+  display: inline-block;
+  margin: 0 0 0 1rem;
+  padding: 1rem 0 0 0;
+  position: relative;
+  transition-duration: .4s;
+  transform-style: preserve-3d;
+}
+
+.icon {
+  position: absolute;
+  background-size: cover;
+  background-position: 50%;
+  backface-visibility: hidden;
+  border: solid 0.2rem $black;
+  height: 101px;
+  width: 101px;
+}
+
+.hover {
+  background-size: cover;
+  background-position: 50%;
+  backface-visibility: hidden;
+  border: solid 0.2rem $black;
+  height: 101px;
+  width: 101px;
+  transform: rotateY(180deg);
+}
+
+.paragraph {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 101px;
+  text-align: center;
+  width: 101px;
+}
+
 .skill {
   margin: 2rem 0.5rem 0.5rem 0.5rem;
 
@@ -11,44 +53,21 @@
     padding: 1.6rem;
 
     &__language {
-      height: 15rem;
-      margin: 0.5rem 0 0 0.5rem;
+      @extend .column;
 
       &__list {
-        display: inline-block;
-        margin: 0 0 0 1rem;
-        padding: 1rem 0 0 0;
-        position: relative;
-        transition-duration: .4s;
-        transform-style: preserve-3d;
+        @extend .list;
 
         &__icon {
-          position: absolute;
-          background-size: cover;
-          background-position: 50%;
-          backface-visibility: hidden;
-          border: solid 0.2rem $black;
-          height: 101px;
-          width: 101px;
+          @extend .icon;
 
           &--hover {
-            background-size: cover;
-            background-position: 50%;
-            backface-visibility: hidden;
-            border: solid 0.2rem $black;
-            height: 101px;
-            width: 101px;
-            transform: rotateY(180deg);
+            @extend .hover;
 
             p {
-              font-size: 2rem;
-              font-weight: bold;
-              line-height: 101px;
-              text-align: center;
-              width: 101px;
+              @extend .paragraph;
             }
           }
-
         }
 
         &:hover {
@@ -58,43 +77,50 @@
     }
 
     &__framework {
-      &__frontend__list {
-        margin: 0.5rem 0 0 0.5rem;
+      &__frontend {
+        @extend .column;
 
-        &__itrem {
-          display: inline;
-          margin: 0 0 0 1rem;
+        &__list {
+          @extend .list;
 
           &__icon {
-            &:hover {
-              visibility: hidden;
-              transform: scale(2.0, 2.0);
-              transition-duration: 0.3s;
-            }
+            @extend .icon;
 
             &--hover {
-              display: none;
-              height: 101px;
-              width: 101px;
+              @extend .hover;
 
-              &:hover {
-                visibility: visible;
+              p {
+                @extend .paragraph;
               }
             }
+          }
+
+          &:hover {
+            transform: rotateY(-180deg);
           }
         }
       }
 
-      &__backend__list {
-        margin: 0.5rem 0 0 0.5rem;
+      &__backend {
+        @extend .column;
 
-        &__itrem {
-          display: inline;
-          margin: 0 0 0 1rem;
+        &__list {
+          @extend .list;
 
-          &__icon:hover {
-            transform: scale(2.0, 2.0);
-            transition-duration: 0.3s;
+          &__icon {
+            @extend .icon;
+
+            &--hover {
+              @extend .hover;
+
+              p {
+                @extend .paragraph;
+              }
+            }
+          }
+
+          &:hover {
+            transform: rotateY(-180deg);
           }
         }
       }

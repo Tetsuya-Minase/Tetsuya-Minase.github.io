@@ -43,14 +43,14 @@ export class SkillComponent implements OnInit {
       icon: 'assets/framework/express-icon.png'
     },
     {
-      skill: 'SpringBoot',
-      experience: 1,
-      icon: 'assets/framework/spring-boot.jpg'
-    },
-    {
       skill: 'node.js',
       experience: 2,
       icon: 'assets/framework/nodejs.png'
+    },
+    {
+      skill: 'SpringBoot',
+      experience: 1,
+      icon: 'assets/framework/spring-boot.jpg'
     }
   ];
 
