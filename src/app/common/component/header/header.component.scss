@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "src/app/common/style/variable";
+@import "../../style/variable";
 
 .header {
   background-color: $light-green;
@@ -7,7 +7,7 @@
   width: 100%;
   position: relative;
 
-  &__list {
+  &__nav__list {
     margin: 0 0 0 1em;
     position: absolute;
     top: 40%;
