@@ -1,10 +1,17 @@
 @charset "UTF-8";
-@import "src/app/common/style/variable";
+@import "../../style/variable";
 
 .footer {
+  background-color: $grey200;
+  bottom: 0;
+  height: 2rem;
+  position: absolute;
+  width: 100%;
+
   &__copyright {
     color: $black;
-    font-size: 1.5em;
+    display: block;
+    font-size: 1.5rem;
     text-align: center;
   }
 }
