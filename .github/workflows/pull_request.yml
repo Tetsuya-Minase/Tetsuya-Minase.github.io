@@ -1,0 +1,23 @@
+name: ng-my-page-pull-request
+
+on:
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: install
+        run: npm install
+      # build通ること確認
+      - name: build
+        run: npm run generate
