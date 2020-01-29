@@ -5,6 +5,7 @@ import { Meta } from '@angular/platform-browser';
 export class SeoService {
   constructor(private readonly meta: Meta) {
     this.meta.addTag({ name: 'author', content: 'page author' });
+    this.meta.addTag({ name: 'viewport', content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0' });
   }
 
 

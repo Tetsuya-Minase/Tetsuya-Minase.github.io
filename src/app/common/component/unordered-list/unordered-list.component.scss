@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import "../../style/variable";
+
+
+.ul-component {
+  display: inline;
+  margin: 0 0 0 1rem;
+
+  &__link__icon {
+    height: $pc-icon-size;
+    width: $pc-icon-size;
+
+
+    // スマホ用(変更箇所だけ上書き)
+    @media screen and (max-width: $sp-max-width) {
+      height: $sp-icon-size;
+      width: $sp-icon-size;
+    }
+  }
+}

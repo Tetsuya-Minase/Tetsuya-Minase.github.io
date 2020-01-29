@@ -7,21 +7,21 @@
   &__detail {
     background-color: $white;
     border-radius: $radius;
-    margin: 0.5em 0 0 0;
-    padding: 1.6em;
+    margin: 0.5rem 0 0 0;
+    padding: 1.6rem;
 
     &__name {
       &__value {
-        font-size: 1.6em;
-        margin: 0.5em 0 0 0.5em;
+        font-size: 1.6rem;
+        margin: 0.5rem 0 0 0.5rem;
       }
     }
 
     &__link {
-      margin: 1em 0 0 0;
+      margin: 1rem 0 0 0;
 
       &__list {
-        margin: 0.5em 0 0 0.5em;
+        margin: 0.5rem 0 0 0.5rem;
       }
     }
   }
