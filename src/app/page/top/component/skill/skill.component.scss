@@ -21,8 +21,14 @@
   background-position: 50%;
   backface-visibility: hidden;
   border: solid 0.2rem $black;
-  height: 101px;
-  width: 101px;
+  height: $pc-icon-size;
+  width: $pc-icon-size;
+
+  // スマホ用(変更箇所だけ上書き)
+  @media screen and (max-width: $sp-max-width) {
+    height: $sp-icon-size;
+    width: $sp-icon-size;
+  }
 }
 
 .hover {
@@ -30,17 +36,30 @@
   background-position: 50%;
   backface-visibility: hidden;
   border: solid 0.2rem $black;
-  height: 101px;
-  width: 101px;
+  height: $pc-icon-size;
+  width: $pc-icon-size;
   transform: rotateY(180deg);
+
+  // スマホ用(変更箇所だけ上書き)
+  @media screen and (max-width: $sp-max-width) {
+    height: $sp-icon-size;
+    width: $sp-icon-size;
+  }
 }
 
 .paragraph {
   font-size: 2rem;
   font-weight: bold;
-  line-height: 101px;
+  line-height: $pc-icon-size;
   text-align: center;
-  width: 101px;
+  width: $pc-icon-size;
+
+  // スマホ用(変更箇所だけ上書き)
+  @media screen and (max-width: $sp-max-width) {
+    font-size: 1.5rem;
+    line-height: $sp-icon-size;
+    width: $sp-icon-size;
+  }
 }
 
 .skill {

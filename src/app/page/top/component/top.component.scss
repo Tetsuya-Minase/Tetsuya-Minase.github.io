@@ -1,5 +1,7 @@
 @charset "UTF-8";
+@import "../../../common/style/variable";
 
+// default(PC)
 .top-component {
   display: flex;
   padding: 0.5em;
@@ -11,5 +13,18 @@
   &__sidebar {
     padding: 0.5em 0.5em 0 2.5em;
     width: 25%;
+  }
+}
+
+// スマホ用
+@media screen and (max-width: $sp-max-width) {
+  .top-component {
+    &__main {
+      width: 100%;
+    }
+
+    &__sidebar {
+      display: none;
+    }
   }
 }
