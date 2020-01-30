@@ -24,3 +24,25 @@ jobs:
 
       - name: deploy
         run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+
+      - name: slack-notice-failure
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2.0.0
+        env:
+          SLACK_CHANNEL: ci-info
+          SLACK_COLOR: '#3278BD'
+          SLACK_MESSAGE: 'Deploy failure :umbrella_with_rain_drops:'
+          SLACK_TITLE: failure
+          SLACK_USERNAME: ci_bot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_TOKEN }}
+
+      - name: slack-notice-success
+        if: success()
+        uses: rtCamp/action-slack-notify@v2.0.0
+        env:
+          SLACK_CHANNEL: ci-info
+          SLACK_COLOR: '#3278BD'
+          SLACK_MESSAGE: 'Deploy success :sunny:'
+          SLACK_TITLE: success
+          SLACK_USERNAME: ci_bot
+          SLACK_WEBHOOK: ${{ secrets.SLACK_TOKEN }}
