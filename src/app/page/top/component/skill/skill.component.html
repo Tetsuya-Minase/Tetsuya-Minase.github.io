@@ -5,6 +5,7 @@
       <heading text="Language" level="2"></heading>
       <ng-container *ngFor="let item of languageList">
         <article class="skill__detail__language__list">
+          <heading [text]="item.skill" level="2" isHidden="true"></heading>
           <img [src]="item.icon" [alt]="item.skill"
                class="skill__detail__language__list__icon">
           <div class="skill__detail__language__list__icon--hover">
@@ -19,6 +20,7 @@
         <heading text="FrontEnd" level="3"></heading>
         <ng-container *ngFor="let item of frontendFrameworkList">
           <article class="skill__detail__framework__frontend__list">
+            <heading [text]="item.skill" level="4" isHidden="true"></heading>
             <img [src]="item.icon" [alt]="item.skill"
                  class="skill__detail__framework__frontend__list__icon">
             <div class="skill__detail__framework__frontend__list__icon--hover">
@@ -29,9 +31,9 @@
       </article>
       <article class="skill__detail__framework__backend">
         <heading text="BackEnd" level="3"></heading>
-
         <ng-container *ngFor="let item of backendFrameworkList">
           <article class="skill__detail__framework__frontend__list">
+            <heading [text]="item.skill" level="4" isHidden="true"></heading>
             <img [src]="item.icon" [alt]="item.skill"
                  class="skill__detail__framework__backend__list__icon">
             <div class="skill__detail__framework__backend__list__icon--hover">

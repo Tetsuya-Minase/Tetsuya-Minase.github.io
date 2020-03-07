@@ -1,0 +1,23 @@
+@mixin heading-base {
+  font-weight: bold;
+}
+
+.heading-1 {
+  @include heading-base;
+  font-size: 28px;
+}
+
+.heading-2 {
+  @include heading-base;
+  font-size: 24px;
+}
+
+.heading-3 {
+  @include heading-base;
+  font-size: 18px;
+}
+
+.heading-4 {
+  @include heading-base;
+  font-size: 12px;
+}

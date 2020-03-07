@@ -12,7 +12,8 @@ export class ProfileComponent implements OnInit {
       linkText: 'Github',
       linkUrl: 'https://github.com/Tetsuya-Minase',
       description: 'Githubだよー',
-      icon: 'assets/link/GitHub-Mark.png'
+      // icon: 'assets/link/GitHub-Mark.png'
+      icon: 'assets/link/github-mark.svg'
     },
     {
       linkText: 'Twitter',
