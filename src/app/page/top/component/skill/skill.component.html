@@ -1,43 +1,43 @@
 <section class="skill">
   <heading text="スキル"></heading>
   <div class="skill__detail">
-    <article class="skill__detail__language">
+    <article class="skill__item">
       <heading text="Language" level="2"></heading>
       <ng-container *ngFor="let item of languageList">
-        <article class="skill__detail__language__list">
+        <article class="skill__list">
           <heading [text]="item.skill" level="2" isHidden="true"></heading>
           <img [src]="item.icon" [alt]="item.skill"
-               class="skill__detail__language__list__icon">
-          <div class="skill__detail__language__list__icon--hover">
-            <p>経験：{{item.experience}}年</p>
+               class="skill__icon">
+          <div class="skill__icon--hover">
+            <p class="skill__paragraph">経験：{{item.experience}}年</p>
           </div>
         </article>
       </ng-container>
     </article>
-    <article class="skill__detail__framework">
+    <article>
       <heading text="Framework" level="2"></heading>
-      <article class="skill__detail__framework__frontend">
+      <article class="skill__item">
         <heading text="FrontEnd" level="3"></heading>
         <ng-container *ngFor="let item of frontendFrameworkList">
-          <article class="skill__detail__framework__frontend__list">
+          <article class="skill__list">
             <heading [text]="item.skill" level="4" isHidden="true"></heading>
             <img [src]="item.icon" [alt]="item.skill"
-                 class="skill__detail__framework__frontend__list__icon">
-            <div class="skill__detail__framework__frontend__list__icon--hover">
-              <p>経験：{{item.experience}}年</p>
+                 class="skill__icon">
+            <div class="skill__icon--hover">
+              <p class="skill__paragraph">経験：{{item.experience}}年</p>
             </div>
           </article>
         </ng-container>
       </article>
-      <article class="skill__detail__framework__backend">
+      <article class="skill__item">
         <heading text="BackEnd" level="3"></heading>
         <ng-container *ngFor="let item of backendFrameworkList">
-          <article class="skill__detail__framework__frontend__list">
+          <article class="skill__list">
             <heading [text]="item.skill" level="4" isHidden="true"></heading>
             <img [src]="item.icon" [alt]="item.skill"
-                 class="skill__detail__framework__backend__list__icon">
-            <div class="skill__detail__framework__backend__list__icon--hover">
-              <p>経験：{{item.experience}}年</p>
+                 class="skill__icon">
+            <div class="skill__icon--hover">
+              <p class="skill__paragraph">経験：{{item.experience}}年</p>
             </div>
           </article>
         </ng-container>
