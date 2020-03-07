@@ -8,6 +8,7 @@ import { SeoService } from './common/service/seo/seo.service';
 import { FooterModule } from './common/component/footer/footer.module';
 import { TopModule } from './page/top/top.module';
 import { HeaderComponent } from './common/component/header/header.component';
+import { HeadingModule } from './common/atoms/heading/heading.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './common/component/header/header.component';
     AppRoutingModule,
     HttpClientModule,
     FooterModule,
-    TopModule
+    TopModule,
+    HeadingModule
   ],
   providers: [SeoService],
   bootstrap: [AppComponent]
