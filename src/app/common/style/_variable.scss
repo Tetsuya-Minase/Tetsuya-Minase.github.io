@@ -24,3 +24,14 @@ $sp-max-width: 411px;
 // tablet横 min width
 $tab-max-width: 959px;
 $tab-min-width: 600px;
+
+// 文字消すやつ
+.hidden {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

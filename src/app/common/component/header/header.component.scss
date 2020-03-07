@@ -6,15 +6,16 @@
   height: 6.4em;
   width: 100%;
   position: relative;
+}
 
-  &__nav__list {
-    margin: 0 0 0 1em;
-    position: absolute;
-    top: 40%;
+.navigation__list {
+  margin: 0 0 0 1em;
+  position: absolute;
+  top: 40%;
+}
 
-    &__item {
-      font-size: 2em;
-      font-weight: bold;
-    }
-  }
+.navigation__item {
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
 }

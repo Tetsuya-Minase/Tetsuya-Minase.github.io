@@ -3,26 +3,24 @@
 
 .profile {
   margin: 0.5em;
+}
 
-  &__detail {
-    background-color: $white;
-    border-radius: $radius;
-    margin: 0.5rem 0 0 0;
-    padding: 1.6rem;
+.profile__detail {
+  background-color: $white;
+  border-radius: $radius;
+  margin: 0.5rem 0 0 0;
+  padding: 1.6rem;
+}
 
-    &__name {
-      &__value {
-        font-size: 1.6rem;
-        margin: 0.5rem 0 0 0.5rem;
-      }
-    }
+.profile__value {
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0 0.5rem;
+}
 
-    &__link {
-      margin: 1rem 0 0 0;
+.profile__link {
+  margin: 1rem 0 0 0;
+}
 
-      &__list {
-        margin: 0.5rem 0 0 0.5rem;
-      }
-    }
-  }
+.profile__list {
+  margin: 0.5rem 0 0 0.5rem;
 }

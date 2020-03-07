@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import "../../../../common/style/variable";
 
-.column {
+@mixin column {
   height: 15rem;
   margin: 0.5rem 0 0 0.5rem;
 }
 
-.list {
+@mixin list {
   display: inline-block;
   margin: 0 0 0 1rem;
   padding: 1rem 0 0 0;
@@ -15,7 +15,7 @@
   transform-style: preserve-3d;
 }
 
-.icon {
+@mixin icon {
   position: absolute;
   background-size: cover;
   background-position: 50%;
@@ -31,7 +31,7 @@
   }
 }
 
-.hover {
+@mixin hover {
   background-size: cover;
   background-position: 50%;
   backface-visibility: hidden;
@@ -47,7 +47,7 @@
   }
 }
 
-.paragraph {
+@mixin paragraph {
   font-size: 2rem;
   font-weight: bold;
   line-height: $pc-icon-size;
@@ -64,85 +64,35 @@
 
 .skill {
   margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
 
-  &__detail {
-    background-color: $white;
-    border-radius: $radius;
-    margin: 0.5rem 0 0 0;
-    padding: 1.6rem;
+.skill__detail {
+  background-color: $white;
+  border-radius: $radius;
+  margin: 0.5rem 0 0 0;
+  padding: 1.6rem;
+}
 
-    &__language {
-      @extend .column;
+.skill__item {
+  @include column;
+}
 
-      &__list {
-        @extend .list;
+.skill__list {
+  @include list;
 
-        &__icon {
-          @extend .icon;
-
-          &--hover {
-            @extend .hover;
-
-            p {
-              @extend .paragraph;
-            }
-          }
-        }
-
-        &:hover {
-          transform: rotateY(-180deg);
-        }
-      }
-    }
-
-    &__framework {
-      &__frontend {
-        @extend .column;
-
-        &__list {
-          @extend .list;
-
-          &__icon {
-            @extend .icon;
-
-            &--hover {
-              @extend .hover;
-
-              p {
-                @extend .paragraph;
-              }
-            }
-          }
-
-          &:hover {
-            transform: rotateY(-180deg);
-          }
-        }
-      }
-
-      &__backend {
-        @extend .column;
-
-        &__list {
-          @extend .list;
-
-          &__icon {
-            @extend .icon;
-
-            &--hover {
-              @extend .hover;
-
-              p {
-                @extend .paragraph;
-              }
-            }
-          }
-
-          &:hover {
-            transform: rotateY(-180deg);
-          }
-        }
-      }
-    }
+  &:hover {
+    transform: rotateY(-180deg);
   }
+}
+
+.skill__icon {
+  @include icon;
+}
+
+.skill__icon--hover {
+  @include hover;
+}
+
+.skill__paragraph {
+  @include paragraph;
 }
