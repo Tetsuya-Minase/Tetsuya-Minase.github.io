@@ -20,7 +20,7 @@ import { LinkListItem } from '../../model/ListItem';
 export class UnorderedListComponent implements OnInit {
   @Input() itemList: LinkListItem[];
   @Input() type: 'text' | 'icon';
-  @Input() size: 'small' | 'large';
+  @Input() size: 'small' | 'large' | 'none';
 
   listClasses: string[] = [];
 
@@ -32,8 +32,11 @@ export class UnorderedListComponent implements OnInit {
       case 'large':
         this.listClasses.push('list__large-icon');
         break;
+      case 'none':
+        break;
       default:
-        throw new Error('size is invalid.');
+        const invalidValue: never = this.size;
+        throw new Error(`${invalidValue} is invalid`);
     }
   }
 }
