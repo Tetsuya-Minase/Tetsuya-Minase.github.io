@@ -1,10 +1,19 @@
 @charset "UTF-8";
 @import "src/app/common/style/variable";
 
-
 .list {
-  display: inline;
-  //margin: 0 0 0 1rem;
+  display: flex;
+}
+
+.list--horizontal {
+  flex-direction: row;
+}
+
+.list--vertical {
+  flex-direction: column;
+}
+
+.list__item {
   margin-left: 1rem;
 }
 

@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "src/app/common/style/variable";
+
+.links {
+  background-color: $links-bg-color;
+  border-radius: $radius;
+  margin-top: 0.5rem;
+  padding: 1.6rem;
+}
+
+.links__list {
+  display: flex;
+  flex-direction: column;
+
+}

@@ -4,11 +4,11 @@ import { LinkListItem } from '../../model/ListItem';
 @Component({
   selector: 'ul-component',
   template: `
-    <ul>
-      <li *ngFor="let item of itemList" class="list">
+    <ul [ngClass]="listClass">
+      <li *ngFor="let item of itemList" class="list__item">
         <a [href]="item.linkUrl" target="_blank">
           <ng-container [ngSwitch]="type">
-            <img *ngSwitchCase="'icon'" [src]="item.icon" [alt]="item.linkText" [ngClass]="listClasses">
+            <img *ngSwitchCase="'icon'" [src]="item.icon" [alt]="item.linkText" [ngClass]="iconClass">
             <ng-container *ngSwitchCase="'text'">{{item.linkText}}</ng-container>
           </ng-container>
         </a>
@@ -21,22 +21,35 @@ export class UnorderedListComponent implements OnInit {
   @Input() itemList: LinkListItem[];
   @Input() type: 'text' | 'icon';
   @Input() size: 'small' | 'large' | 'none';
+  @Input() direction: 'horizontal' | 'vertical' = 'horizontal';
 
-  listClasses: string[] = [];
+  listClass: string[] = ['list'];
+  iconClass: string[] = [];
 
   ngOnInit(): void {
     switch (this.size) {
       case 'small':
-        this.listClasses.push('list__small-icon');
+        this.iconClass.push('list__small-icon');
         break;
       case 'large':
-        this.listClasses.push('list__large-icon');
+        this.iconClass.push('list__large-icon');
         break;
       case 'none':
         break;
       default:
-        const invalidValue: never = this.size;
-        throw new Error(`${invalidValue} is invalid`);
+        const invalidSize: never = this.size;
+        console.error(`${invalidSize} is invalid`);
+    }
+    switch (this.direction) {
+      case 'horizontal':
+        this.listClass.push('list--horizontal');
+        break;
+      case 'vertical':
+        this.listClass.push('list--vertical');
+        break;
+      default:
+        const invalidDirection: never = this.direction;
+        console.error(`${invalidDirection} is invalid`);
     }
   }
 }
