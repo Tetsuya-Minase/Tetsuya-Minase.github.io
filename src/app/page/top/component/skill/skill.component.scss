@@ -21,13 +21,13 @@
   background-position: 50%;
   backface-visibility: hidden;
   border: solid 0.2rem $black;
-  height: $pc-icon-size;
-  width: $pc-icon-size;
+  height: $pc-list-large-icon;
+  width: $pc-list-large-icon;
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
-    height: $sp-icon-size;
-    width: $sp-icon-size;
+    height: $sp-list-large-icon;
+    width: $sp-list-large-icon;
   }
 }
 
@@ -36,29 +36,29 @@
   background-position: 50%;
   backface-visibility: hidden;
   border: solid 0.2rem $black;
-  height: $pc-icon-size;
-  width: $pc-icon-size;
+  height: $pc-list-large-icon;
+  width: $pc-list-large-icon;
   transform: rotateY(180deg);
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
-    height: $sp-icon-size;
-    width: $sp-icon-size;
+    height: $sp-list-large-icon;
+    width: $sp-list-large-icon;
   }
 }
 
 @mixin paragraph {
   font-size: 2rem;
   font-weight: bold;
-  line-height: $pc-icon-size;
+  line-height: $pc-list-large-icon;
   text-align: center;
-  width: $pc-icon-size;
+  width: $pc-list-large-icon;
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
     font-size: 1.5rem;
-    line-height: $sp-icon-size;
-    width: $sp-icon-size;
+    line-height: $sp-list-large-icon;
+    width: $sp-list-large-icon;
   }
 }
 
