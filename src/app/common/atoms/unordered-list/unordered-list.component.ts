@@ -7,7 +7,10 @@ import { LinkListItem } from '../../model/ListItem';
     <ul>
       <li *ngFor="let item of itemList" class="list">
         <a [href]="item.linkUrl" target="_blank">
-          <img [src]="item.icon" [alt]="item.linkText" [ngClass]="listClasses">
+          <ng-container [ngSwitch]="type">
+            <img *ngSwitchCase="'icon'" [src]="item.icon" [alt]="item.linkText" [ngClass]="listClasses">
+            <ng-container *ngSwitchCase="'text'">{{item.linkText}}</ng-container>
+          </ng-container>
         </a>
       </li>
     </ul>
@@ -16,6 +19,7 @@ import { LinkListItem } from '../../model/ListItem';
 })
 export class UnorderedListComponent implements OnInit {
   @Input() itemList: LinkListItem[];
+  @Input() type: 'text' | 'icon';
   @Input() size: 'small' | 'large';
 
   listClasses: string[] = [];

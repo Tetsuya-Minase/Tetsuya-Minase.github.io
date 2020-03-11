@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkListItem } from '../../../common/model/ListItem';
 
 @Component({
   selector: 'app-component',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./links.component.scss']
 })
 export class LinksComponent implements OnInit {
+  linkList: LinkListItem[] = [];
 
   constructor() {
   }

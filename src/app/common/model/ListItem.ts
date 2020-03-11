@@ -1,7 +1,7 @@
 export type LinkListItem = {
   linkUrl: string,
   linkText: string,
-  description: string,
+  description?: string,
   icon?: string
 };
 
