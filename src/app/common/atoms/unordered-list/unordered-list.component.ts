@@ -5,7 +5,7 @@ import { LinkListItem } from '../../model/ListItem';
   selector: 'ul-component',
   template: `
     <ul [ngClass]="listClass">
-      <li *ngFor="let item of itemList" class="list__item">
+      <li *ngFor="let item of itemList" [ngClass]="itemClass">
         <a [href]="item.linkUrl" target="_blank">
           <ng-container [ngSwitch]="type">
             <img *ngSwitchCase="'icon'" [src]="item.icon" [alt]="item.linkText" [ngClass]="iconClass">
@@ -21,9 +21,11 @@ export class UnorderedListComponent implements OnInit {
   @Input() itemList: LinkListItem[];
   @Input() type: 'text' | 'icon';
   @Input() size: 'small' | 'large' | 'none';
+  @Input() styles: 'none' | 'dot' | 'triangle' = 'none';
   @Input() direction: 'horizontal' | 'vertical' = 'horizontal';
 
   listClass: string[] = ['list'];
+  itemClass: string[] = ['list__item'];
   iconClass: string[] = [];
 
   ngOnInit(): void {
@@ -50,6 +52,18 @@ export class UnorderedListComponent implements OnInit {
       default:
         const invalidDirection: never = this.direction;
         console.error(`${invalidDirection} is invalid`);
+    }
+    switch (this.styles) {
+      case 'dot':
+        break;
+      case 'triangle':
+        this.itemClass.push('list__item--triangle');
+        break;
+      case 'none':
+        break;
+      default:
+        const invalidStyle: never = this.styles;
+        console.error(`${invalidStyle} is invalid`);
     }
   }
 }

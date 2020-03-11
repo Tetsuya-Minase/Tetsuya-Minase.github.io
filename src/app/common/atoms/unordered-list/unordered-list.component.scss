@@ -17,6 +17,10 @@
   margin-left: 1rem;
 }
 
+.list__item--triangle:before {
+  content: '▷';
+}
+
 .list__small-icon {
   height: $pc-list-small-icon;
   width: $pc-list-small-icon;
