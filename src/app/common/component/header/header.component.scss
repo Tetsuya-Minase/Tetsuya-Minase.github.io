@@ -62,7 +62,6 @@
     display: none;
   }
 
-  /*アイコンのスペース*/
   .menu-open {
     display: inline-block;
     width: 30px;
@@ -106,7 +105,7 @@
     top: 0;
     left: 0;
     z-index: 9999;
-    width: 85%;
+    width: 65%;
     max-width: 330px;
     height: 100%;
     background: $header-menu-bg-color;
@@ -124,5 +123,15 @@
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
     box-shadow: 6px 0 25px rgba(0, 0, 0, .15);
+  }
+
+  .navigation__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navigation__item {
+    margin-bottom: 5px;
   }
 }
