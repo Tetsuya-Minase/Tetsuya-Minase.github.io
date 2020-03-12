@@ -4,10 +4,13 @@ import { LinkListItem } from '../../model/ListItem';
 @Component({
   selector: 'ul-component',
   template: `
-    <ul>
-      <li *ngFor="let item of itemList" class="list">
-        <a [href]="item.linkUrl" target="_blank">
-          <img [src]="item.icon" [alt]="item.linkText" [ngClass]="listClasses">
+    <ul [ngClass]="listClass">
+      <li *ngFor="let item of itemList" [ngClass]="itemClass">
+        <a [href]="item.linkUrl" target="_blank" class="list__link">
+          <ng-container [ngSwitch]="type">
+            <img *ngSwitchCase="'icon'" [src]="item.icon" [alt]="item.linkText" [ngClass]="iconClass">
+            <ng-container *ngSwitchCase="'text'">{{item.linkText}}</ng-container>
+          </ng-container>
         </a>
       </li>
     </ul>
@@ -16,20 +19,53 @@ import { LinkListItem } from '../../model/ListItem';
 })
 export class UnorderedListComponent implements OnInit {
   @Input() itemList: LinkListItem[];
-  @Input() size: 'small' | 'large';
+  @Input() type: 'text' | 'icon';
+  @Input() size: 'small' | 'large' | 'none';
+  @Input() styles: 'none' | 'dot' | 'triangle' = 'none';
+  @Input() direction: 'horizontal' | 'vertical' = 'horizontal';
 
-  listClasses: string[] = [];
+  listClass: string[] = ['list'];
+  itemClass: string[] = [];
+  iconClass: string[] = [];
 
   ngOnInit(): void {
     switch (this.size) {
       case 'small':
-        this.listClasses.push('list__small-icon');
+        this.iconClass.push('list__small-icon');
         break;
       case 'large':
-        this.listClasses.push('list__large-icon');
+        this.iconClass.push('list__large-icon');
+        break;
+      case 'none':
         break;
       default:
-        throw new Error('size is invalid.');
+        const invalidSize: never = this.size;
+        console.error(`${invalidSize} is invalid`);
+    }
+    switch (this.direction) {
+      case 'horizontal':
+        this.listClass.push('list--horizontal');
+        this.itemClass.push('list__item--horizontal');
+        break;
+      case 'vertical':
+        this.listClass.push('list--vertical');
+        this.itemClass.push('list__item--vertical');
+        break;
+      default:
+        const invalidDirection: never = this.direction;
+        console.error(`${invalidDirection} is invalid`);
+    }
+    switch (this.styles) {
+      case 'dot':
+        break;
+      case 'triangle':
+        this.itemClass.push('list__item--triangle');
+        break;
+      case 'none':
+        break;
+      default:
+        const invalidStyle: never = this.styles;
+        console.error(`${invalidStyle} is invalid`);
     }
   }
 }

@@ -1,11 +1,33 @@
 @charset "UTF-8";
 @import "src/app/common/style/variable";
 
-
 .list {
-  display: inline;
-  //margin: 0 0 0 1rem;
+  display: flex;
+}
+
+.list--horizontal {
+  flex-direction: row;
+}
+
+.list--vertical {
+  flex-direction: column;
+}
+
+.list__item--horizontal {
   margin-left: 1rem;
+}
+
+.list__item--vertical {
+  margin-bottom: 1rem;
+}
+
+.list__item--triangle:before {
+  content: '▷';
+}
+
+.list__link {
+  color: $list-link-color;
+  text-decoration: none;
 }
 
 .list__small-icon {

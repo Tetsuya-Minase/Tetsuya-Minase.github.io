@@ -9,6 +9,7 @@ import { FooterModule } from './common/component/footer/footer.module';
 import { TopModule } from './page/top/top.module';
 import { HeaderComponent } from './common/component/header/header.component';
 import { HeadingModule } from './common/atoms/heading/heading.module';
+import { LinksModule } from './page/links/links.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HeadingModule } from './common/atoms/heading/heading.module';
     HttpClientModule,
     FooterModule,
     TopModule,
+    LinksModule,
     HeadingModule
   ],
   providers: [SeoService],
