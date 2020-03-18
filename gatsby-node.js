@@ -1,4 +1,5 @@
 const path = require(`path`)
+const fs = require('fs');
 
 require('ts-node').register({
   compilerOptions: {
@@ -6,6 +7,11 @@ require('ts-node').register({
     target: 'esnext',
   },
 });
+
+exports.onPostBuild = function() {
+  fs.renameSync(path.join(__dirname, 'public'), path.join(__dirname, 'dist'));
+  fs.mkdirSync(path.join(__dirname, 'public'));
+};
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
