@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `test page`,
-    description: `gatsby sample.`,
+    title: `水無瀬のプログラミング日記`,
+    description: `勉強したこととかのメモ`,
     author: `@minase_tetsuya`,
   },
   plugins: [
