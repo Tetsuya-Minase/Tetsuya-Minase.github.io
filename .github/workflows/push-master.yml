@@ -18,8 +18,10 @@ jobs:
 
       - name: install and setup config
         run: npm install
+
       - name: build
         run: npm run deploy
+
       - name: deploy
         use: peaceiris/actions-gh-pages@v3
         with:
