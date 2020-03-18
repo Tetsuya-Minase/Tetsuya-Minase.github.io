@@ -21,12 +21,14 @@ export const seoQuery = graphql`
   }
 `
 
-type Props = {
+type _Props = {
   description: string
   lang: string
   meta: any[]
   title: string
 }
+
+type Props = Partial<_Props>
 
 const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(seoQuery)
@@ -73,7 +75,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta ?? [])}
     />
   )
 }
