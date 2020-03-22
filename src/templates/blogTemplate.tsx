@@ -4,8 +4,10 @@ import Layout from '../components/layout'
 import './blogTemplate.css'
 import styled from 'styled-components'
 
-const ArticleList = styled.ul`
+const ArticleTagList = styled.ul`
   display: flex;
+  margin: 0;
+  padding: 0;
 `
 const ArticleTag = styled.li<any>`
   background-color: #f5f5f5;
@@ -41,13 +43,13 @@ const Template: React.FC<any> = ({ data }) => {
       <article className="article">
         <h1 className="article__title">{frontmatter.title}</h1>
         <time className="article__time">{frontmatter.date}</time>
-        <ArticleList>
+        <ArticleTagList>
           {frontmatter.tag.map((content: string, index: number) => (
             <ArticleTag key={index} tagName={content}>
               {content}
             </ArticleTag>
           ))}
-        </ArticleList>
+        </ArticleTagList>
         <article className="article__content" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </Layout>
