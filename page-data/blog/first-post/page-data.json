@@ -1,1 +1,0 @@
-{"componentChunkName":"component---src-templates-blog-template-tsx","path":"/blog/first-post","result":{"data":{"markdownRemark":{"html":"<h1>title</h1>\n<p>first post</p>","frontmatter":{"date":"March 18, 2020","path":"/blog/first-post","title":"My first blog post"}}},"pageContext":{}}}

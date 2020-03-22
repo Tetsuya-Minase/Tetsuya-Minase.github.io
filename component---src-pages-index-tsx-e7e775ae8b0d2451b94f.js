@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{QeBL:function(e,n,t){"use strict";t.r(n),t.d(n,"pageQuery",(function(){return o}));var a=t("q1tI"),l=t.n(a),r=t("9Dj+"),c=t("H8eV"),o="153222097";n.default=function(e){var n=e.data;return console.log(n),l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"Home"}),l.a.createElement("h1",null,"Minase's Blog"),l.a.createElement("section",null,l.a.createElement("h1",null,"最新記事")))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-e7e775ae8b0d2451b94f.js.map
