@@ -1,15 +1,30 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Minase's Blog</h1>
-  </Layout>
-)
+const IndexPage: React.FC = ({ data }) => {
+  console.log(data)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <h1>Minase's Blog</h1>
+      <section>
+        <h1>最新記事</h1>
+      </section>
+    </Layout>
+  )
+}
+
+export const pageQuery = graphql`
+  query IndexData {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`
 
 export default IndexPage
