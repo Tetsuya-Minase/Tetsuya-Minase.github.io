@@ -691,6 +691,7 @@ export type FileFieldsEnum =
   'childMarkdownRemark___frontmatter___title' |
   'childMarkdownRemark___frontmatter___path' |
   'childMarkdownRemark___frontmatter___date' |
+  'childMarkdownRemark___frontmatter___tag' |
   'childMarkdownRemark___excerpt' |
   'childMarkdownRemark___rawMarkdownBody' |
   'childMarkdownRemark___fileAbsolutePath' |
@@ -1452,6 +1453,7 @@ export type MarkdownRemarkFieldsEnum =
   'frontmatter___title' |
   'frontmatter___path' |
   'frontmatter___date' |
+  'frontmatter___tag' |
   'excerpt' |
   'rawMarkdownBody' |
   'fileAbsolutePath' |
@@ -1574,6 +1576,7 @@ export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   date?: Maybe<Scalars['Date']>;
+  tag?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 
@@ -1588,6 +1591,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
+  tag?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -2815,14 +2819,19 @@ export type SeoDataQueryVariables = {};
 
 export type SeoDataQuery = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
-export type Unnamed_1_QueryVariables = {
+export type IndexDataQueryVariables = {};
+
+
+export type IndexDataQuery = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+
+export type BlogTemplateDataQueryVariables = {
   path: Scalars['String'];
 };
 
 
-export type Unnamed_1_Query = { markdownRemark: Maybe<(
+export type BlogTemplateDataQuery = { markdownRemark: Maybe<(
     Pick<MarkdownRemark, 'html'>
-    & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'path' | 'title'>> }
+    & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'path' | 'title' | 'tag'>> }
   )> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;

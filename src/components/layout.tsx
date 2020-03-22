@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 import { SiteTitleQuery } from '../../types/graphql-types'
+import { Copyright } from './copyright'
 
 export const layoutQuery = graphql`
   query SiteTitle {
@@ -30,11 +31,7 @@ const Layout: React.FC = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Copyright copyright="©Tetsuya Minase" />
       </div>
     </>
   )
