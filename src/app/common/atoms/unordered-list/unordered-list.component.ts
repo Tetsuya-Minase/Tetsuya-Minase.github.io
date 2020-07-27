@@ -3,18 +3,7 @@ import { LinkListItem } from '../../model/ListItem';
 
 @Component({
   selector: 'ul-component',
-  template: `
-    <ul [ngClass]="listClass">
-      <li *ngFor="let item of itemList" [ngClass]="itemClass">
-        <a [href]="item.linkUrl" target="_blank" class="list__link">
-          <ng-container [ngSwitch]="type">
-            <img *ngSwitchCase="'icon'" [src]="item.icon" [alt]="item.linkText" [ngClass]="iconClass">
-            <ng-container *ngSwitchCase="'text'">{{item.linkText}}</ng-container>
-          </ng-container>
-        </a>
-      </li>
-    </ul>
-  `,
+  templateUrl: './unordered-list.component.html',
   styleUrls: ['./unordered-list.component.scss']
 })
 export class UnorderedListComponent implements OnInit {
@@ -45,11 +34,11 @@ export class UnorderedListComponent implements OnInit {
     switch (this.direction) {
       case 'horizontal':
         this.listClass.push('list--horizontal');
-        this.itemClass.push('list__item--horizontal');
+        this.itemClass.push('list__horizontal-item');
         break;
       case 'vertical':
         this.listClass.push('list--vertical');
-        this.itemClass.push('list__item--vertical');
+        this.itemClass.push('list__vertical-item');
         break;
       default:
         const invalidDirection: never = this.direction;
