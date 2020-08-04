@@ -2,43 +2,23 @@
 @import "../../../../common/style/variable";
 
 @mixin column {
-  height: 15rem;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 1rem 0 0 1rem;
 }
 
 @mixin list {
-  display: inline-block;
-  margin: 0 0 0 1rem;
-  padding: 1rem 0 0 0;
-  position: relative;
-  transition-duration: .4s;
-  transform-style: preserve-3d;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0 0 0;
+}
+
+@mixin list-item {
+  width: $pc-list-large-icon;
 }
 
 @mixin icon {
-  position: absolute;
-  background-size: cover;
-  background-position: 50%;
-  backface-visibility: hidden;
-  border: solid 0.2rem $black;
+  border: solid 0.1rem $black;
   height: $pc-list-large-icon;
   width: $pc-list-large-icon;
-
-  // スマホ用(変更箇所だけ上書き)
-  @media screen and (max-width: $sp-max-width) {
-    height: $sp-list-large-icon;
-    width: $sp-list-large-icon;
-  }
-}
-
-@mixin hover {
-  background-size: cover;
-  background-position: 50%;
-  backface-visibility: hidden;
-  border: solid 0.2rem $black;
-  height: $pc-list-large-icon;
-  width: $pc-list-large-icon;
-  transform: rotateY(180deg);
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
@@ -66,31 +46,32 @@
   margin: 2rem 0.5rem 0.5rem 0.5rem;
 }
 
-.skill__detail {
-  background-color: $white;
-  border-radius: $radius;
-  margin: 0.5rem 0 0 0;
-  padding: 1.6rem;
+.flexWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  // スマホ用(変更箇所だけ上書き)
+  @media screen and (max-width: $sp-max-width) {
+    width: 100%;
+  }
 }
 
 .skill__item {
   @include column;
+  @include box;
 }
 
 .skill__list {
   @include list;
 
-  &:hover {
-    transform: rotateY(-180deg);
-  }
+}
+
+.skill__list__item {
+  @include list-item;
 }
 
 .skill__icon {
   @include icon;
-}
-
-.skill__icon--hover {
-  @include hover;
 }
 
 .skill__paragraph {

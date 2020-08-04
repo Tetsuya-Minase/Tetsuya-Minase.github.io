@@ -1,9 +1,14 @@
 <header class="header">
-  <heading class="header__title" text="Minase's My Page" level="1"></heading>
+  <heading class="header__title" text="Minase's My Page" level="1" color="white"></heading>
   <nav class="navigation">
+    <heading [isHidden]="true" text="Minase's page links"></heading>
     <ul class="navigation__list">
-      <li class="navigation__item"><a class="navigation__link" routerLink="/">About me</a></li>
-      <li class="navigation__item"><a class="navigation__link" routerLink="/link">Links</a></li>
+      <li><a class="navigation__link" routerLink="/">
+        <heading text="About Me" level="2" color="white"></heading>
+      </a></li>
+      <li><a class="navigation__link" routerLink="/link">
+        <heading text="Link" level="2" color="white"></heading>
+      </a></li>
     </ul>
   </nav>
   <div class="header__menu">
@@ -12,9 +17,14 @@
     <label class="menu__input-none menu--close" for="menu__input"></label>
     <div class="menu__content">
       <nav class="menu__navigation">
+        <heading [isHidden]="true" text="Minase's page links"></heading>
         <ul class="navigation__list">
-          <li class="navigation__item"><a class="navigation__link" routerLink="/">About me</a></li>
-          <li class="navigation__item"><a class="navigation__link" routerLink="/link">Links</a></li>
+          <li class="navigation__item"><a class="navigation__link" routerLink="/">
+            <heading text="About Me" level="2" color="white"></heading>
+          </a></li>
+          <li class="navigation__item"><a class="navigation__link" routerLink="/link">
+            <heading text="Link" level="2" color="white"></heading>
+          </a></li>
         </ul>
       </nav>
     </div>

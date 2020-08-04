@@ -1,23 +1,26 @@
-@mixin heading-base {
-  font-weight: bold;
-}
+@charset "UTF-8";
+@import "../../style/variable";
 
 .heading-1 {
-  @include heading-base;
-  font-size: 28px;
+  font-size: $heading-level-1-pc;
 }
 
 .heading-2 {
-  @include heading-base;
-  font-size: 24px;
+  font-size: $heading-level-2-pc;
 }
 
 .heading-3 {
-  @include heading-base;
-  font-size: 18px;
+  font-size: $heading-level-3-pc;
 }
 
 .heading-4 {
-  @include heading-base;
-  font-size: 12px;
+  font-size: $heading-level-4-pc;
+}
+
+.heading-black {
+  color: $heading-font-black;
+}
+
+.heading-white {
+  color: $heading-font-white;
 }

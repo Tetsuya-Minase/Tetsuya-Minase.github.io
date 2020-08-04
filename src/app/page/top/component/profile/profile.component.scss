@@ -2,14 +2,21 @@
 @import "../../../../common/style/variable";
 
 .profile {
-  margin: 0.5em;
+  margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.profile__title {
+  width: 100%;
+}
+
+.profile__wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .profile__detail {
-  background-color: $profile-bg-color;
-  border-radius: $radius;
-  margin-top: 0.5rem;
-  padding: 1.6rem;
+  margin: 1rem 0 0 1rem;
+  @include box;
 }
 
 .profile__value {

@@ -4,14 +4,16 @@
 
 
 html {
-  background-color: $light-blue;
   color: $black;
   font-size: $font-size;
 }
 
 body {
   margin: 0;
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
+  font-family: "Helvetica Neue",
+  Arial,
+  "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;
 }

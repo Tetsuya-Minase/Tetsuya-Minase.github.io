@@ -8,12 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeadingComponent implements OnInit {
   @Input() text: string;
   @Input() level: '1' | '2' | '3' | '4' = '1';
+  @Input() color: 'black' | 'white' = 'black';
   @Input() isHidden = false;
 
   headingClass: string[] = [];
 
   ngOnInit() {
-    if (Boolean(this.isHidden)) {
+    if (this.isHidden) {
       this.headingClass.push('hidden');
     }
 
@@ -33,6 +34,18 @@ export class HeadingComponent implements OnInit {
       default:
         const invalidValue: never = this.level;
         console.error(`${invalidValue} is invalid level.`);
+    }
+
+    switch (this.color) {
+      case 'black':
+        this.headingClass.push('heading-black');
+        break;
+      case 'white':
+        this.headingClass.push('heading-white');
+        break;
+      default:
+        const invalidValue: never = this.color;
+        console.error(`${invalidValue} is invalid color`);
     }
   }
 

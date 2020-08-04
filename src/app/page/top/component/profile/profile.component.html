@@ -1,14 +1,22 @@
 <section class="profile">
-  <heading text="Profile" level="1"></heading>
-  <div class="profile__detail">
-    <article class="profile__name">
-      <heading text="Name" level="2"></heading>
-      <p class="profile__value">水無瀬</p>
-    </article>
-    <article class="profile__link">
-      <heading text="Accounts" level="2"></heading>
-      <ul-component [itemList]="linkList" type="icon" size="small" direction="horizontal"
-                    class="profile__list"></ul-component>
-    </article>
+  <heading class="profile__title" level="1" text="Profile"></heading>
+  <div class="profile__wrapper">
+    <div class="profile__detail">
+      <section>
+        <heading level="2" text="Name"></heading>
+        <p class="profile__value">水無瀬</p>
+      </section>
+      <section>
+        <heading level="2" text="Job"></heading>
+        <p class="profile__value">Web Developer</p>
+      </section>
+    </div>
+    <div class="profile__detail">
+      <section class="profile__link">
+        <heading level="2" text="Accounts"></heading>
+        <ul-component [itemList]="linkList" class="profile__list" direction="horizontal" size="small"
+                      type="icon"></ul-component>
+      </section>
+    </div>
   </div>
 </section>

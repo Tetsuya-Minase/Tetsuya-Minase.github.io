@@ -8,10 +8,10 @@ $light-grey: #919191;
 $grey200: #e9ecef;
 
 // header
-$header-bg-color: #D8FFA9;
+$header-bg-color: #448AFF;
 $header-font-color: #333;
-$header-menu-button-color: #333;
-$header-menu-bg-color: #fff;
+$header-menu-button-color: #fff;
+$header-menu-bg-color: #448AFF;
 
 // profile
 $profile-bg-color: #fff;
@@ -28,10 +28,18 @@ $radius: 18px;
 // font-size
 $font-size: 62.5%;
 
+// heading
+$heading-level-1-pc: 3.2rem;
+$heading-level-2-pc: 3rem;
+$heading-level-3-pc: 2.8rem;
+$heading-level-4-pc: 2.4rem;
+$heading-font-black: #333;
+$heading-font-white: #ffffff;
+
 // icon size
 $pc-list-small-icon: 60px;
 $sp-list-small-icon: 40px;
-$pc-list-large-icon: 101px;
+$pc-list-large-icon: 104px;
 $sp-list-large-icon: 80px;
 
 // window size
@@ -50,4 +58,19 @@ $tab-min-width: 600px;
   overflow: hidden;
   padding: 0;
   position: absolute;
+}
+
+@mixin box {
+  min-height: 20rem;
+  min-width: 36rem;
+  border: 0.05rem solid #979797;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #333333;
+
+  // スマホ用(変更箇所だけ上書き)
+  @media screen and (max-width: $sp-max-width) {
+    min-height: 15rem;
+    min-width: 20rem;
+    width: 100%;
+  }
 }

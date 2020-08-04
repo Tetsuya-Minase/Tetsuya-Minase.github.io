@@ -1,14 +1,8 @@
 @charset "UTF-8";
 @import "../../../common/style/variable";
 
-// default(PC)
-.top-component {
-  display: flex;
-  padding: 0.5em;
-}
-
 .top-component__main {
-  width: 75%;
+  width: 100%;
 }
 
 .top-component__sidebar {
