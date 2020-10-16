@@ -9,9 +9,11 @@ import { LinkListItem } from '../../../common/model/ListItem';
 export class LinksComponent implements OnInit {
   linkList: LinkListItem[] = [
     { linkUrl: 'https://github.com/Tetsuya-Minase', linkText: 'Github' },
-    { linkUrl: 'https://twitter.com/minase_tetsuya', linkText: 'Twitter' },
-    { linkUrl: 'https://minase-program.hatenablog.com/', linkText: 'はてなブログ' },
-    { linkUrl: 'https://qiita.com/minase_tetsuya', linkText: 'Qiita' }
+    { linkUrl: 'https://twitter.com/tminasen', linkText: 'Twitter' },
+    { linkUrl: 'https://tminasen.dev/', linkText: '個人ブログ' },
+    { linkUrl: 'https://zenn.dev/tminasen', linkText: 'Zenn' },
+    { linkUrl: 'https://minase-program.hatenablog.com/', linkText: 'はてなブログ(更新停止中)' },
+    { linkUrl: 'https://qiita.com/tminasen', linkText: 'Qiita(更新停止中)' }
   ];
 
   constructor() {
