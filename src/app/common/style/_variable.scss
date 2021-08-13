@@ -12,6 +12,7 @@ $header-bg-color: #448AFF;
 $header-font-color: #333;
 $header-menu-button-color: #fff;
 $header-menu-bg-color: #448AFF;
+$header-menu-opened-bg-color: rgb(0, 0, 0, 0.5);
 
 // profile
 $profile-bg-color: #fff;
@@ -61,16 +62,17 @@ $tab-min-width: 600px;
 }
 
 @mixin box {
-  min-height: 20rem;
-  min-width: 36rem;
-  border: 0.05rem solid #979797;
-  border-radius: 1rem;
-  box-shadow: 0.1rem 0.1rem 0.2rem #333333;
+  min-height: 200px;
+  min-width: 360px;
+  border: 0.5px solid #979797;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px #333333;
+  padding: 8px;
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
-    min-height: 15rem;
-    min-width: 20rem;
+    min-height: 150px;
+    min-width: 200px;
     width: 100%;
   }
 }
