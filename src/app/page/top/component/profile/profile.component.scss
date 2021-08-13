@@ -2,7 +2,7 @@
 @import "../../../../common/style/variable";
 
 .profile {
-  margin: 2rem 0.5rem 0.5rem 0.5rem;
+  margin: 24px 4px 4px 4px;
 }
 
 .profile__title {
@@ -14,24 +14,26 @@
   flex-wrap: wrap;
 }
 
+.profile__section {
+  &:not(:first-of-type) {
+    margin-top: 16px;
+  }
+}
+
 .profile__detail {
-  margin: 1rem 0 0 1rem;
+  margin: 12px 0 0 12px;
   @include box;
 }
 
 .profile__value {
-  font-size: 2rem;
-  margin: 0.5rem 0 0 0.5rem;
+  font-size: 2.4rem;
+  margin: 4px 0 0 4px;
   // for sp
   @media screen and (max-width: $sp-max-width) {
     font-size: 1.6rem;
   }
 }
 
-.profile__link {
-  margin: 1rem 0 0 0;
-}
-
 .profile__list {
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 4px 0 0 4px;
 }
