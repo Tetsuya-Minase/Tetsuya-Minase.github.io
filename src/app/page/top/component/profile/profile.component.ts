@@ -19,9 +19,9 @@ export class ProfileComponent implements OnInit {
       icon: 'assets/link/Twitter_Social_Icon_Circle_Color.svg'
     },
     {
-      linkText: 'ブログ',
-      linkUrl: 'https://minase-program.hatenablog.com/',
-      icon: 'assets/link/hatenablog-logo.svg'
+      linkText: 'zenn',
+      linkUrl: 'https://zenn.dev/tminasen',
+      icon: 'assets/link/zenn-logo-icon.png'
     }
   ];
 

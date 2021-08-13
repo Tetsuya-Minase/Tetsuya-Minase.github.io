@@ -2,13 +2,13 @@
 @import "../../../../common/style/variable";
 
 @mixin column {
-  margin: 1rem 0 0 1rem;
+  margin: 12px 0 0 12px;
 }
 
 @mixin list {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 0 0 0;
+  margin-top: 12px;
 }
 
 @mixin list-item {
@@ -16,7 +16,7 @@
 }
 
 @mixin icon {
-  border: solid 0.1rem $black;
+  border: solid 1px $black;
   height: $pc-list-large-icon;
   width: $pc-list-large-icon;
 
@@ -43,7 +43,7 @@
 }
 
 .skill {
-  margin: 2rem 0.5rem 0.5rem 0.5rem;
+  margin: 24px 4px 4px 4px;
 }
 
 .flexWrapper {

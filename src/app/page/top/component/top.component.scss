@@ -2,11 +2,11 @@
 @import "../../../common/style/variable";
 
 .top-component__main {
-  width: 100%;
+  padding: 24px;
 }
 
 .top-component__sidebar {
-  padding: 0.5em 0.5em 0 2.5em;
+  padding: 4px 4px 0 24px;
   width: 25%;
 }
 
@@ -14,7 +14,7 @@
 // スマホ用
 @media screen and (max-width: $sp-max-width) {
   .top-component__main {
-    width: 100%;
+    padding: 12px
   }
   .top-component__sidebar {
     display: none;
