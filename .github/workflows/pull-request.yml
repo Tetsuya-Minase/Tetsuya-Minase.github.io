@@ -24,24 +24,12 @@ jobs:
         timeout-minutes: 5
         run: npm run generate
 
-      - name: slack-notice-failure
+      - name: notice-failure
         if: failure()
-        uses: rtCamp/action-slack-notify@v2.0.0
-        env:
-          SLACK_CHANNEL: ci-info
-          SLACK_COLOR: '#3278BD'
-          SLACK_MESSAGE: 'Build failure :umbrella_with_rain_drops:'
-          SLACK_TITLE: failure
-          SLACK_USERNAME: ci_bot
-          SLACK_WEBHOOK: ${{ secrets.SLACK_TOKEN }}
-
-      - name: slack-notice-success
+        run: |
+          curl -XPOST -H "Content-Type: application/json" -XPOST -d "{\"content\": \"${{ secrets.DISCORD_MENTION }} deploy failure :umbrella:\",\"embeds\": [{\"title\": \"build detail\", \"color\": 14427686, \"fields\": [{\"name\": \"repository\",\"value\": \"$GITHUB_REPOSITORY\"}, {\"name\": \"action url\", \"value\": \"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}]}]}" ${{ secrets.DISCORD_URL }}
+      - name: notice-success
         if: success()
-        uses: rtCamp/action-slack-notify@v2.0.0
-        env:
-          SLACK_CHANNEL: ci-info
-          SLACK_COLOR: '#3278BD'
-          SLACK_MESSAGE: 'Build success :sunny:'
-          SLACK_TITLE: success
-          SLACK_USERNAME: ci_bot
-          SLACK_WEBHOOK: ${{ secrets.SLACK_TOKEN }}
+        run: |
+          curl -XPOST -H "Content-Type: application/json" -XPOST -d "{\"content\": \"deploy success :sunny:\",\"embeds\": [{\"title\": \"build detail\", \"color\": 1096065, \"fields\": [{\"name\": \"repository\",\"value\": \"$GITHUB_REPOSITORY\"}, {\"name\": \"action url\", \"value\": \"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}]}]}" ${{ secrets.DISCORD_URL }}
+
