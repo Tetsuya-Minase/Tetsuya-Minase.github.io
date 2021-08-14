@@ -51,16 +51,16 @@
   cursor: pointer;
   padding: 4px;
 
-  & span:before {
+  & span::before {
     bottom: -8px;
   }
 
-  & span:after {
+  & span::after {
     bottom: -16px;
   }
 }
 
-.menu--open span, .menu--open span:before, .menu--open span:after {
+.menu--open span, .menu--open span::before, .menu--open span::after {
   position: absolute;
   height: 4px;
   width: 28px;
@@ -79,10 +79,34 @@
   height: 100%;
   background: $header-menu-opened-bg-color;
   transition: .3s ease-in-out;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 30px;
+    left: 340px;
+    content: '';
+    background-color: #fff;
+    display: block;
+    width: 32px;
+    height: 4px;
+    transform: rotateZ(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    top: 30px;
+    left: 340px;
+    content: '';
+    background-color: #fff;
+    display: block;
+    width: 32px;
+    height: 4px;
+    transform: rotateZ(135deg);
+  }
 }
 
 .menu__content {
-  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -117,4 +141,17 @@
 
 .navigation__item {
   margin-top: 12px;
+}
+
+// スマホ用
+@media screen and (max-width: $sp-max-width) {
+  .menu--close {
+    &::before {
+      left: 254px;
+    }
+
+    &::after {
+      left: 254px;
+    }
+  }
 }
