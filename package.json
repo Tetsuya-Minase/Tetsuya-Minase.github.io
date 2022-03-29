@@ -11,7 +11,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "npx scully",
+    "scully": "scully --scanRoutes",
     "clean": "rimraf ./public && rimraf ./dist",
     "generate": "run-s clean build:prod scully",
     "deploy": "run-s generate deploy:only"
