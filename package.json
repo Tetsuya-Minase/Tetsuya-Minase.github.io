@@ -11,11 +11,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully --scanRoutes --nw",
+    "scully": "npx scully",
     "clean": "rimraf ./public && rimraf ./dist",
     "generate": "run-s clean build:prod scully",
-    "deploy": "run-s generate deploy:only",
-    "deploy:only": "firebase deploy"
+    "deploy": "run-s generate deploy:only"
   },
   "private": true,
   "dependencies": {
@@ -27,9 +26,10 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
-    "@scullyio/init": "1.0.1",
+    "@scullyio/init": "2.1.29",
     "@scullyio/ng-lib": "latest",
     "@scullyio/scully": "latest",
+    "@scullyio/scully-plugin-puppeteer": "^2.1.29",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
@@ -43,7 +43,6 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "firebase-tools": "^7.11.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.4",
