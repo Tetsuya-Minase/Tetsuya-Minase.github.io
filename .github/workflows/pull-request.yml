@@ -10,15 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: setup
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 16
 
       - name: install
         run: npm install
+
       # build通ること確認
       - name: build
         timeout-minutes: 5
