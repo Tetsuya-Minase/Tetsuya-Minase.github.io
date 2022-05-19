@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { LinkListItem } from '../../../../common/model/ListItem';
 
 @Component({
@@ -6,7 +6,7 @@ import { LinkListItem } from '../../../../common/model/ListItem';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
   linkList: LinkListItem[] = [
     {
       linkText: 'Github',
@@ -26,9 +26,6 @@ export class ProfileComponent implements OnInit {
   ];
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
 }

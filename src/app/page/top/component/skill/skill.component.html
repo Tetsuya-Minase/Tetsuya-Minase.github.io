@@ -1,12 +1,12 @@
 <section class="skill">
-  <heading text="Skills"></heading>
+  <app-heading text="Skills"></app-heading>
   <div class="flexWrapper">
     <article class="skill__item">
-      <heading level="2" text="Language"></heading>
+      <app-heading level="2" text="Language"></app-heading>
       <div class="skill__list">
         <ng-container *ngFor="let item of languageList">
           <section class="skill__list__item">
-            <heading [text]="item.skill" isHidden="true" level="2"></heading>
+            <app-heading [text]="item.skill" isHidden="true" level="2"></app-heading>
             <img [alt]="item.skill" [src]="item.icon"
                  class="skill__icon">
           </section>
@@ -14,11 +14,11 @@
       </div>
     </article>
     <article class="skill__item">
-      <heading level="3" text="FrontEndFramework"></heading>
+      <app-heading level="3" text="FrontEndFramework"></app-heading>
       <div class="skill__list">
         <ng-container *ngFor="let item of frontendFrameworkList">
           <section class="skill__list">
-            <heading [text]="item.skill" isHidden="true" level="4"></heading>
+            <app-heading [text]="item.skill" isHidden="true" level="4"></app-heading>
             <img [alt]="item.skill" [src]="item.icon"
                  class="skill__icon">
           </section>
@@ -26,11 +26,11 @@
       </div>
     </article>
     <article class="skill__item">
-      <heading level="3" text="BackEndFramework"></heading>
+      <app-heading level="3" text="BackEndFramework"></app-heading>
       <div class="skill__list">
         <ng-container *ngFor="let item of backendFrameworkList">
           <article class="skill__list">
-            <heading [text]="item.skill" isHidden="true" level="4"></heading>
+            <app-heading [text]="item.skill" isHidden="true" level="4"></app-heading>
             <img [alt]="item.skill" [src]="item.icon"
                  class="skill__icon">
           </article>

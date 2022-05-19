@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { LinkListItem } from '../../model/ListItem';
 
 @Component({
-  selector: 'ul-component',
+  selector: 'app-ul-component',
   templateUrl: './unordered-list.component.html',
   styleUrls: ['./unordered-list.component.scss']
 })

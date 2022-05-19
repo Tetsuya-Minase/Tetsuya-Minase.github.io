@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { LinkListItem } from '../../../common/model/ListItem';
 
 @Component({
@@ -6,7 +6,7 @@ import { LinkListItem } from '../../../common/model/ListItem';
   templateUrl: './links.component.html',
   styleUrls: ['./links.component.scss']
 })
-export class LinksComponent implements OnInit {
+export class LinksComponent {
   linkList: LinkListItem[] = [
     { linkUrl: 'https://github.com/Tetsuya-Minase', linkText: 'Github' },
     { linkUrl: 'https://twitter.com/tminasen', linkText: 'Twitter' },
@@ -17,9 +17,6 @@ export class LinksComponent implements OnInit {
   ];
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
 }
