@@ -1,9 +1,9 @@
-name: ng-my-page-push-master
+name: ng-my-page-push-main
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
