@@ -1,19 +1,15 @@
-import { AfterViewInit, Component, OnChanges } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnChanges, AfterViewInit {
+export class HeaderComponent {
   public isMenuOpened = false;
 
-  ngOnChanges() {
-    console.log('changes');
-  }
-
-  ngAfterViewInit() {
-    console.log('after view init');
+  public closeDialog() {
+    this.isMenuOpened = false;
   }
 
 }

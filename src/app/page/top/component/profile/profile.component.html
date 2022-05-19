@@ -1,21 +1,21 @@
 <section class="profile">
-  <heading class="profile__title" level="1" text="Profile"></heading>
+  <app-heading class="profile__title" level="1" text="Profile"></app-heading>
   <div class="profile__wrapper">
     <div class="profile__detail">
       <section class="profile__section">
-        <heading level="2" text="Name"></heading>
+        <app-heading level="2" text="Name"></app-heading>
         <p class="profile__value">水無瀬</p>
       </section>
       <section class="profile__section">
-        <heading level="2" text="Job"></heading>
+        <app-heading level="2" text="Job"></app-heading>
         <p class="profile__value">Web Developer</p>
       </section>
     </div>
     <div class="profile__detail">
       <section class="profile__section">
-        <heading level="2" text="Accounts"></heading>
-        <ul-component [itemList]="linkList" class="profile__list" direction="horizontal" size="small"
-                      type="icon"></ul-component>
+        <app-heading level="2" text="Accounts"></app-heading>
+        <app-ul-component [itemList]="linkList" class="profile__list" direction="horizontal" size="small"
+                      type="icon"></app-ul-component>
       </section>
     </div>
   </div>

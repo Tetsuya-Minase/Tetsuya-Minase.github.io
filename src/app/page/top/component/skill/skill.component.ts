@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SkillListItem } from '../../../../common/model/ListItem';
 
 @Component({
@@ -6,7 +6,7 @@ import { SkillListItem } from '../../../../common/model/ListItem';
   templateUrl: './skill.component.html',
   styleUrls: ['./skill.component.scss']
 })
-export class SkillComponent implements OnInit {
+export class SkillComponent {
   languageList: SkillListItem[] = [
     {
       skill: 'JavaScript',
@@ -55,9 +55,6 @@ export class SkillComponent implements OnInit {
   ];
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 
 }
