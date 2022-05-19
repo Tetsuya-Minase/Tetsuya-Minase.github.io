@@ -20,6 +20,8 @@ jobs:
       - name: install
         run: npm ci
 
+      - name: lint
+        run: npm run lint
       # build通ること確認
       - name: build
         timeout-minutes: 5
