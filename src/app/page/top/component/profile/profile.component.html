@@ -17,7 +17,7 @@
           <ul class="profile__link">
             <li *ngFor="let item of linkList">
               <a [href]="item.linkUrl" target="_blank" class="profile__link__text">
-                <img [src]="item.icon" [alt]="item.description" class="profile__list__icon" />
+                <img [src]="item.icon" [alt]="item.linkText" class="profile__list__icon" />
               </a>
             </li>
           </ul>
