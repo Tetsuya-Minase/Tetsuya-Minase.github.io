@@ -10,6 +10,7 @@ export class HeadingComponent implements OnInit {
   @Input() level: '1' | '2' | '3' | '4' = '1';
   @Input() color: 'black' | 'white' = 'black';
   @Input() isHidden = false;
+  @Input() ariaHidden: boolean | undefined;
 
   headingClass: string[] = [];
 

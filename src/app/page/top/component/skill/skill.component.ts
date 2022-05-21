@@ -7,50 +7,64 @@ import { SkillListItem } from '../../../../common/model/ListItem';
   styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent {
-  languageList: SkillListItem[] = [
+  public frontendSkillList: SkillListItem[] = [
     {
       skill: 'JavaScript',
-      experience: 2,
-      icon: 'assets/language/typescript.svg'
+      experience: 5,
+      icon: 'assets/skill-icon/typescript.svg'
     },
     {
       skill: 'TypeScript',
-      experience: 2,
-      icon: 'assets/language/javascript.svg'
+      experience: 5,
+      icon: 'assets/skill-icon/javascript.svg'
     },
-    {
-      skill: 'Java',
-      experience: 1,
-      icon: 'assets/language/java.svg'
-    }
-  ];
-  frontendFrameworkList: SkillListItem[] = [
     {
       skill: 'Angular',
-      experience: 2,
-      icon: 'assets/framework/angular.svg'
+      experience: 4,
+      icon: 'assets/skill-icon/angular.svg'
     },
     {
-      skill: 'react',
-      experience: 1,
-      icon: 'assets/framework/react.svg'
+      skill: 'React',
+      experience: 4,
+      icon: 'assets/skill-icon/react.svg'
+    },
+    {
+      skill: 'styled-components',
+      experience: 3,
+      icon: 'assets/skill-icon/styled-components.svg'
+    },
+    {
+      skill: 'tailwindcss',
+      experience: 3,
+      icon: 'assets/skill-icon/tailwindcss-mark.svg'
     }
   ];
-  backendFrameworkList: SkillListItem[] = [
+
+  public backendSkillList: SkillListItem[] = [
     {
       skill: 'express',
-      experience: 2,
-      icon: 'assets/framework/express-icon.png'
+      experience: 5,
+      icon: 'assets/skill-icon/express-icon.png'
     },
     {
       skill: 'node.js',
-      experience: 2,
-      icon: 'assets/framework/nodejs.png'
+      experience: 5,
+      icon: 'assets/skill-icon/nodejs.png'
     },
     {
       skill: 'SpringBoot',
+      experience: 3,
+      icon: 'assets/skill-icon/spring-boot.jpg'
+    },
+    {
+      skill: 'Rust',
       experience: 1,
-      icon: 'assets/framework/spring-boot.jpg'
+      icon: 'assets/skill-icon/rust-logo.svg'
+    },
+    {
+      skill: 'Java',
+      experience: 3,
+      icon: 'assets/skill-icon/java.svg'
     }
   ];
 

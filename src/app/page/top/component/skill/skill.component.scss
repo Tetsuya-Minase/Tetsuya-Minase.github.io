@@ -1,14 +1,12 @@
 @charset "UTF-8";
-@import "../../../../common/style/variable";
-
-@mixin column {
-  margin: 12px 0 0 12px;
-}
+@import "../../../../common/style/mixin";
 
 @mixin list {
-  display: flex;
-  justify-content: space-around;
   margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-row-gap: 12px;
 }
 
 @mixin list-item {
@@ -16,7 +14,6 @@
 }
 
 @mixin icon {
-  border: solid 1px $black;
   height: $pc-list-large-icon;
   width: $pc-list-large-icon;
 
@@ -36,28 +33,29 @@
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     line-height: $sp-list-large-icon;
     width: $sp-list-large-icon;
   }
 }
 
 .skill {
-  margin: 24px 4px 4px 4px;
+  margin-top: 24px;
 }
 
-.flexWrapper {
-  display: flex;
-  flex-wrap: wrap;
+.skill-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-row-gap: 16px;
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
 .skill__item {
-  @include column;
   @include box;
 }
 

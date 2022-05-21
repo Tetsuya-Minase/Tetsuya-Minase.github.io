@@ -34,11 +34,9 @@ export class UnorderedListComponent implements OnInit {
     switch (this.direction) {
       case 'horizontal':
         this.listClass.push('list--horizontal');
-        this.itemClass.push('list__horizontal-item');
         break;
       case 'vertical':
         this.listClass.push('list--vertical');
-        this.itemClass.push('list__vertical-item');
         break;
       default:
         const invalidDirection: never = this.direction;
