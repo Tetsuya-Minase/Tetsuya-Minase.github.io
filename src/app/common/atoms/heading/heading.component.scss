@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "../../style/variable";
+@import "../../style/mixin";
 
 .heading-1 {
   font-size: $heading-level-1-pc;
@@ -23,4 +24,8 @@
 
 .heading-white {
   color: $heading-font-white;
+}
+
+.hidden {
+  @include hidden;
 }

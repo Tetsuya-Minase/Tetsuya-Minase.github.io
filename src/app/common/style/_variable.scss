@@ -2,26 +2,26 @@
 
 // color
 $black: #333333;
-$white: #FFFFFF;
-$light-blue: #C6DCFF;
+$white: #ffffff;
+$light-blue: #c6dcff;
 $light-grey: #919191;
 $grey200: #e9ecef;
 
 // header
-$header-bg-color: #448AFF;
-$header-font-color: #333;
-$header-menu-button-color: #fff;
-$header-menu-bg-color: #448AFF;
+$header-bg-color: #448aff;
+$header-font-color: #333333;
+$header-menu-button-color: #ffffff;
+$header-menu-bg-color: #448aff;
 $header-menu-opened-bg-color: rgb(0, 0, 0, 0.5);
 
 // profile
-$profile-bg-color: #fff;
+$profile-bg-color: #ffffff;
 
 // links
-$links-bg-color: #fff;
+$links-bg-color: #ffffff;
 
 // list
-$list-link-color: #03c;
+$list-link-color: #0033cc;
 
 // radius
 $radius: 18px;
@@ -49,30 +49,3 @@ $sp-max-width: 411px;
 // tablet横 min width
 $tab-max-width: 959px;
 $tab-min-width: 600px;
-
-// 文字消すやつ
-.hidden {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-}
-
-@mixin box {
-  min-height: 200px;
-  min-width: 360px;
-  border: 0.5px solid #979797;
-  border-radius: 10px;
-  box-shadow: 1px 1px 2px #333333;
-  padding: 8px;
-
-  // スマホ用(変更箇所だけ上書き)
-  @media screen and (max-width: $sp-max-width) {
-    min-height: 150px;
-    min-width: 200px;
-    width: 100%;
-  }
-}
