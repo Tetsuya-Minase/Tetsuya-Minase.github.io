@@ -34,9 +34,9 @@
 
 .profile__link {
   margin-top: 8px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 
 .profile__link__text {

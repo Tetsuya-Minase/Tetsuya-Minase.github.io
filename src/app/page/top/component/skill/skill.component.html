@@ -2,9 +2,9 @@
   <app-heading text="Skills"></app-heading>
   <div class="skill-wrapper">
     <article class="skill__item">
-      <app-heading level="2" text="Language"></app-heading>
+      <app-heading level="2" text="Frontend Skill"></app-heading>
       <div class="skill__list">
-        <ng-container *ngFor="let item of languageList">
+        <ng-container *ngFor="let item of frontendSkillList">
           <section class="skill__list__item">
             <app-heading [text]="item.skill" isHidden="true" level="2"></app-heading>
             <img [alt]="item.skill" [src]="item.icon"
@@ -13,23 +13,23 @@
         </ng-container>
       </div>
     </article>
-    <article class="skill__item">
-      <app-heading level="3" text="FrontEndFramework"></app-heading>
-      <div class="skill__list">
-        <ng-container *ngFor="let item of frontendFrameworkList">
-          <section class="skill__list">
-            <app-heading [text]="item.skill" isHidden="true" level="4"></app-heading>
-            <img [alt]="item.skill" [src]="item.icon"
-                 class="skill__icon">
-          </section>
-        </ng-container>
-      </div>
-    </article>
+<!--    <article class="skill__item">-->
+<!--      <app-heading level="3" text="FrontEndFramework"></app-heading>-->
+<!--      <div class="skill__list">-->
+<!--        <ng-container *ngFor="let item of frontendFrameworkList">-->
+<!--          <section class="skill__list__item">-->
+<!--            <app-heading [text]="item.skill" isHidden="true" level="4"></app-heading>-->
+<!--            <img [alt]="item.skill" [src]="item.icon"-->
+<!--                 class="skill__icon">-->
+<!--          </section>-->
+<!--        </ng-container>-->
+<!--      </div>-->
+<!--    </article>-->
     <article class="skill__item">
       <app-heading level="3" text="BackEndFramework"></app-heading>
       <div class="skill__list">
-        <ng-container *ngFor="let item of backendFrameworkList">
-          <article class="skill__list">
+        <ng-container *ngFor="let item of backendSkillList">
+          <article class="skill__list__item">
             <app-heading [text]="item.skill" isHidden="true" level="4"></app-heading>
             <img [alt]="item.skill" [src]="item.icon"
                  class="skill__icon">
