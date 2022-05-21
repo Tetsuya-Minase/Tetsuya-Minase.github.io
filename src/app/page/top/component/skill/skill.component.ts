@@ -25,8 +25,13 @@ export class SkillComponent {
     },
     {
       skill: 'React',
-      experience: 4,
+      experience: 3,
       icon: 'assets/skill-icon/react.svg'
+    },
+    {
+      skill: 'Sass',
+      experience: 4,
+      icon: 'assets/skill-icon/sass-logo.svg'
     },
     {
       skill: 'styled-components',
