@@ -2,16 +2,10 @@
 @import "../../../../common/style/variable";
 
 .profile {
-  margin: 0 4px 4px 4px;
-}
-
-.profile__title {
-  width: 100%;
-}
-
-.profile__wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  margin-top:12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .profile__section {
@@ -21,19 +15,13 @@
 }
 
 .profile__detail {
-  margin: 12px 0 0 12px;
   @include box;
 }
 
 .profile__value {
   font-size: 2.4rem;
-  margin: 4px 0 0 4px;
   // for sp
   @media screen and (max-width: $sp-max-width) {
     font-size: 1.6rem;
   }
-}
-
-.profile__list {
-  margin: 4px 0 0 4px;
 }

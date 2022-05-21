@@ -43,12 +43,14 @@
 }
 
 .skill {
-  margin: 24px 4px 4px 4px;
+  margin-top: 24px;
 }
 
-.flexWrapper {
-  display: flex;
-  flex-wrap: wrap;
+.skill-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  grid-row-gap: 16px;
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {

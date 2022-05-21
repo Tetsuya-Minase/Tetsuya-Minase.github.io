@@ -1,6 +1,6 @@
-<section class="profile">
-  <app-heading class="profile__title" level="1" text="Profile"></app-heading>
-  <div class="profile__wrapper">
+<section>
+  <app-heading level="1" text="Profile"></app-heading>
+  <div class="profile">
     <div class="profile__detail">
       <section class="profile__section">
         <app-heading level="2" text="Name"></app-heading>
@@ -14,7 +14,7 @@
     <div class="profile__detail">
       <section class="profile__section">
         <app-heading level="2" text="Accounts"></app-heading>
-        <app-ul-component [itemList]="linkList" class="profile__list" direction="horizontal" size="small"
+        <app-ul-component [itemList]="linkList" direction="horizontal" size="small"
                       type="icon"></app-ul-component>
       </section>
     </div>
