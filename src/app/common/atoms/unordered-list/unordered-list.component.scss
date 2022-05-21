@@ -14,14 +14,6 @@
   flex-direction: column;
 }
 
-.list__horizontal-item {
-  margin-left: 1rem;
-}
-
-.list__vertical-item {
-  margin-bottom: 1rem;
-}
-
 .list__item--triangle:before {
   content: '▷';
 }
