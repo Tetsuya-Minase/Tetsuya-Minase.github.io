@@ -2,19 +2,11 @@
 @import "./variable";
 
 @mixin box {
-  min-height: 200px;
   min-width: 360px;
   border: 0.5px solid #979797;
   border-radius: 10px;
   box-shadow: 1px 1px 2px #333333;
   padding: 8px;
-
-  // スマホ用(変更箇所だけ上書き)
-  @media screen and (max-width: $sp-max-width) {
-    min-height: 150px;
-    min-width: 200px;
-    width: 100%;
-  }
 }
 
 // 文字消すやつ

@@ -54,7 +54,7 @@
 
   // スマホ用(変更箇所だけ上書き)
   @media screen and (max-width: $sp-max-width) {
-    width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
