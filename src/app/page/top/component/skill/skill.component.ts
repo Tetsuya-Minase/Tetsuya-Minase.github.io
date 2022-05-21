@@ -10,46 +10,51 @@ export class SkillComponent {
   languageList: SkillListItem[] = [
     {
       skill: 'JavaScript',
-      experience: 2,
+      experience: 5,
       icon: 'assets/language/typescript.svg'
     },
     {
       skill: 'TypeScript',
-      experience: 2,
+      experience: 5,
       icon: 'assets/language/javascript.svg'
     },
     {
-      skill: 'Java',
+      skill: 'Rust',
       experience: 1,
+      icon: 'assets/language/rust-logo.svg'
+    },
+    {
+      skill: 'Java',
+      experience: 3,
       icon: 'assets/language/java.svg'
     }
   ];
   frontendFrameworkList: SkillListItem[] = [
     {
       skill: 'Angular',
-      experience: 2,
+      experience: 4,
       icon: 'assets/framework/angular.svg'
     },
     {
       skill: 'react',
-      experience: 1,
+      experience: 4,
       icon: 'assets/framework/react.svg'
     }
   ];
   backendFrameworkList: SkillListItem[] = [
     {
       skill: 'express',
-      experience: 2,
+      experience: 5,
       icon: 'assets/framework/express-icon.png'
     },
     {
       skill: 'node.js',
-      experience: 2,
+      experience: 5,
       icon: 'assets/framework/nodejs.png'
     },
     {
       skill: 'SpringBoot',
-      experience: 1,
+      experience: 3,
       icon: 'assets/framework/spring-boot.jpg'
     }
   ];
