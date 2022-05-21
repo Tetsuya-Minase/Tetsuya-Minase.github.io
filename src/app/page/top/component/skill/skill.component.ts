@@ -11,12 +11,12 @@ export class SkillComponent {
     {
       skill: 'JavaScript',
       experience: 5,
-      icon: 'assets/skill-icon/typescript.svg'
+      icon: 'assets/skill-icon/javascript.svg'
     },
     {
       skill: 'TypeScript',
       experience: 5,
-      icon: 'assets/skill-icon/javascript.svg'
+      icon: 'assets/skill-icon/typescript.svg'
     },
     {
       skill: 'Angular',
@@ -25,8 +25,18 @@ export class SkillComponent {
     },
     {
       skill: 'React',
-      experience: 4,
+      experience: 3,
       icon: 'assets/skill-icon/react.svg'
+    },
+    {
+      skill: 'Next.js',
+      experience: 1,
+      icon: 'assets/skill-icon/nextjs-logo.svg'
+    },
+    {
+      skill: 'Sass',
+      experience: 4,
+      icon: 'assets/skill-icon/sass-logo.svg'
     },
     {
       skill: 'styled-components',
@@ -44,17 +54,17 @@ export class SkillComponent {
     {
       skill: 'express',
       experience: 5,
-      icon: 'assets/skill-icon/express-icon.png'
+      icon: 'assets/skill-icon/express.svg'
     },
     {
       skill: 'node.js',
       experience: 5,
-      icon: 'assets/skill-icon/nodejs.png'
+      icon: 'assets/skill-icon/nodejs.svg'
     },
     {
       skill: 'SpringBoot',
       experience: 3,
-      icon: 'assets/skill-icon/spring-boot.jpg'
+      icon: 'assets/skill-icon/spring-boot.svg'
     },
     {
       skill: 'Rust',
