@@ -1,4 +1,3 @@
-import { IdleMonitorService } from '@scullyio/ng-lib';
 import { Component } from '@angular/core';
 import { SeoService } from './common/service/seo/seo.service';
 
@@ -8,6 +7,6 @@ import { SeoService } from './common/service/seo/seo.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private readonly idle: IdleMonitorService, private readonly seoService: SeoService) {
+  constructor(private readonly seoService: SeoService) {
   }
 }
