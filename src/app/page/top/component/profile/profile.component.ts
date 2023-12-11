@@ -16,7 +16,7 @@ export class ProfileComponent {
     {
       linkText: 'X',
       linkUrl: 'https://twitter.com/tminasen',
-      icon: 'assets/link/x-logo.svg',
+      icon: 'assets/link/x-logo.png',
     },
     {
       linkText: 'zenn',
