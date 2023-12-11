@@ -14,9 +14,9 @@ export class ProfileComponent {
       icon: 'assets/link/github-mark.svg',
     },
     {
-      linkText: 'Twitter',
-      linkUrl: 'https://twitter.com/minase_tetsuya',
-      icon: 'assets/link/Twitter_Social_Icon_Circle_Color.svg',
+      linkText: 'X',
+      linkUrl: 'https://twitter.com/tminasen',
+      icon: 'assets/link/x-logo.svg',
     },
     {
       linkText: 'zenn',
