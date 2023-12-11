@@ -2,11 +2,11 @@
 my page.
  
 ## Description
-used by Angular and scully.
+used by Angular.
  
 ## Author
 Tetsuya Minase.
-twitter: @tetsuya_minase
+twitter: @tminasen.
  
 ## License 
 TBD.
