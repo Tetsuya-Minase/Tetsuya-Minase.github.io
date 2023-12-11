@@ -26,10 +26,6 @@
     "@angular/platform-browser": "^16.2.12",
     "@angular/platform-browser-dynamic": "^16.2.12",
     "@angular/router": "^16.2.12",
-    "@scullyio/init": "2.1.41",
-    "@scullyio/ng-lib": "latest",
-    "@scullyio/scully": "latest",
-    "@scullyio/scully-plugin-puppeteer": "^2.1.29",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.13.3"
