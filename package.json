@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:static": "scully serve",
     "start:local": "run-s generate start:static",
     "build": "ng build",
     "build:prod": "ng build --aot --configuration production",
