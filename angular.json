@@ -50,7 +50,7 @@
                 "."
               ]
             },
-            "prerender": true,
+            "prerender": false,
             "ssr": {
               "entry": "server.ts"
             }
