@@ -50,10 +50,8 @@
                 "."
               ]
             },
-            "prerender": false,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "prerender": true,
+            "ssr": false
           },
           "configurations": {
             "production": {
