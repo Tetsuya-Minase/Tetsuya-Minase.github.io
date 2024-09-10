@@ -51,9 +51,7 @@
               ]
             },
             "prerender": false,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "ssr": true
           },
           "configurations": {
             "production": {
@@ -138,6 +136,9 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
