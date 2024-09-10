@@ -27,6 +27,14 @@ jobs:
         timeout-minutes: 5
         run: npm run build:prod
 
+      - name: deploy-dry-run
+        env:
+          USER_NAME: ${{ secrets.USER_NAME }}
+          EMAIL: ${{ secrets.EMAIL }}
+        run: |
+          npm run build -- --configuration production --aot
+          npx angular-cli-ghpages --dry-run --dir=public/browser --name="${USER_NAME}" --email="${EMAIL}" --repo=https://github.com/Tetsuya-Minase/Tetsuya-Minase.github.io.git --branch=gh-pages
+
       - name: notice-failure
         if: failure()
         run: |
