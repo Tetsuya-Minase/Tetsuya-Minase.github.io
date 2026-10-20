@@ -4,18 +4,30 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  # デプロイ途中のキャンセルで Pages が不整合になるのを防ぐ
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: setup
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v7
         with:
           node-version: 20
+          cache: npm
 
       - name: install
         run: npm ci
@@ -24,21 +36,37 @@ jobs:
         timeout-minutes: 5
         run: npm run build:prod
 
-      - name: deploy
-        if: github.ref == 'refs/heads/main'
-        env:
-          USER_NAME: ${{ secrets.USER_NAME }}
-          EMAIL: ${{ secrets.EMAIL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm run build -- --configuration production --aot
-          npm run deploy -- --dir=public/browser --name="${USER_NAME}" --email="${EMAIL}" --repo=https://github.com/Tetsuya-Minase/Tetsuya-Minase.github.io.git --branch=gh-pages
+      # 直リンク時に Angular のルーティングへフォールバックさせる
+      - name: spa fallback
+        run: cp public/browser/index.html public/browser/404.html
 
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: public/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+  notify:
+    needs: [build, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
       - name: notice-failure
-        if: failure()
+        if: contains(needs.*.result, 'failure')
         run: |
           curl -XPOST -H "Content-Type: application/json" -XPOST -d "{\"content\": \"${{ secrets.DISCORD_MENTION }} deploy failure :umbrella:\",\"embeds\": [{\"title\": \"build detail\", \"color\": 14427686, \"fields\": [{\"name\": \"repository\",\"value\": \"$GITHUB_REPOSITORY\"}, {\"name\": \"action url\", \"value\": \"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}]}]}" ${{ secrets.DISCORD_URL }}
       - name: notice-success
-        if: success()
+        if: ${{ !contains(needs.*.result, 'failure') }}
         run: |
           curl -XPOST -H "Content-Type: application/json" -XPOST -d "{\"content\": \"deploy success :sunny:\",\"embeds\": [{\"title\": \"build detail\", \"color\": 1096065, \"fields\": [{\"name\": \"repository\",\"value\": \"$GITHUB_REPOSITORY\"}, {\"name\": \"action url\", \"value\": \"$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"}]}]}" ${{ secrets.DISCORD_URL }}
